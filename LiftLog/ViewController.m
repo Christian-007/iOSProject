@@ -3,7 +3,7 @@
 //  LiftLog
 //
 //  Created by Christian Ing on 04/01/2017.
-//  Copyright © 2017 Christian Ing. All rights reserved.
+//  Copyright © 2017 Christian Ing & Andrejus Skulis. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -23,6 +23,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 
 @end
