@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HistoryCollectionViewController.h
 //  LiftLog
 //
 //  Created by Christian Ing on 05/01/2017.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITabBarController
-@property (weak, nonatomic) IBOutlet UITabBar *bottomBar;
+@interface HistoryCollectionViewController : UICollectionViewController
 
 @end

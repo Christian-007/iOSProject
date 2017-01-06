@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  CalendarViewController.m
 //  LiftLog
 //
-//  Created by Christian Ing on 05/01/2017.
+//  Created by Christian Ing on 06/01/2017.
 //  Copyright © 2017 Christian Ing. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "CalendarViewController.h"
 
-@interface ViewController ()
+@interface CalendarViewController ()
 
 @end
 
-@implementation ViewController
+@implementation CalendarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

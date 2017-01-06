@@ -7,9 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0683B71E1EE0B900B5C6BC /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683A61E1EE0B900B5C6BC /* angry_birds_cake.jpg */; };
+		9C0683B81E1EE0B900B5C6BC /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683A71E1EE0B900B5C6BC /* creme_brelee.jpg */; };
+		9C0683B91E1EE0B900B5C6BC /* egg_benedict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683A81E1EE0B900B5C6BC /* egg_benedict.jpg */; };
+		9C0683BA1E1EE0B900B5C6BC /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683A91E1EE0B900B5C6BC /* full_breakfast.jpg */; };
+		9C0683BB1E1EE0B900B5C6BC /* green_tea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683AA1E1EE0B900B5C6BC /* green_tea.jpg */; };
+		9C0683BC1E1EE0B900B5C6BC /* ham_and_cheese_panini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683AB1E1EE0B900B5C6BC /* ham_and_cheese_panini.jpg */; };
+		9C0683BD1E1EE0B900B5C6BC /* ham_and_egg_sandwich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683AC1E1EE0B900B5C6BC /* ham_and_egg_sandwich.jpg */; };
+		9C0683BE1E1EE0B900B5C6BC /* hamburger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683AD1E1EE0B900B5C6BC /* hamburger.jpg */; };
+		9C0683BF1E1EE0B900B5C6BC /* instant_noodle_with_egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683AE1E1EE0B900B5C6BC /* instant_noodle_with_egg.jpg */; };
+		9C0683C01E1EE0B900B5C6BC /* japanese_noodle_with_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683AF1E1EE0B900B5C6BC /* japanese_noodle_with_pork.jpg */; };
+		9C0683C11E1EE0B900B5C6BC /* mushroom_risotto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B01E1EE0B900B5C6BC /* mushroom_risotto.jpg */; };
+		9C0683C21E1EE0B900B5C6BC /* noodle_with_bbq_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B11E1EE0B900B5C6BC /* noodle_with_bbq_pork.jpg */; };
+		9C0683C31E1EE0B900B5C6BC /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B21E1EE0B900B5C6BC /* photo-frame.png */; };
+		9C0683C41E1EE0B900B5C6BC /* starbucks_coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B31E1EE0B900B5C6BC /* starbucks_coffee.jpg */; };
+		9C0683C51E1EE0B900B5C6BC /* thai_shrimp_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B41E1EE0B900B5C6BC /* thai_shrimp_cake.jpg */; };
+		9C0683C61E1EE0B900B5C6BC /* vegetable_curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B51E1EE0B900B5C6BC /* vegetable_curry.jpg */; };
+		9C0683C71E1EE0B900B5C6BC /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B61E1EE0B900B5C6BC /* white_chocolate_donut.jpg */; };
+		9C0683CA1E1EE48800B5C6BC /* HistoryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */; };
+		9C0683CD1E1EED0D00B5C6BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0683CC1E1EED0D00B5C6BC /* ViewController.m */; };
+		9C45FCBC1E1FC03800B79B12 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */; };
+		9C45FCBF1E1FC08800B79B12 /* DetailModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C45FCBE1E1FC08800B79B12 /* DetailModalViewController.m */; };
 		9CA06BF21E1D2DF8004C8168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF11E1D2DF8004C8168 /* main.m */; };
 		9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */; };
-		9CA06BF81E1D2DF8004C8168 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF71E1D2DF8004C8168 /* ViewController.m */; };
 		9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BF91E1D2DF8004C8168 /* Main.storyboard */; };
 		9CA06BFD1E1D2DF8004C8168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BFC1E1D2DF8004C8168 /* Assets.xcassets */; };
 		9CA06C001E1D2DF8004C8168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BFE1E1D2DF8004C8168 /* LaunchScreen.storyboard */; };
@@ -36,12 +56,35 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0683A61E1EE0B900B5C6BC /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_birds_cake.jpg; sourceTree = "<group>"; };
+		9C0683A71E1EE0B900B5C6BC /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
+		9C0683A81E1EE0B900B5C6BC /* egg_benedict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg_benedict.jpg; sourceTree = "<group>"; };
+		9C0683A91E1EE0B900B5C6BC /* full_breakfast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = full_breakfast.jpg; sourceTree = "<group>"; };
+		9C0683AA1E1EE0B900B5C6BC /* green_tea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green_tea.jpg; sourceTree = "<group>"; };
+		9C0683AB1E1EE0B900B5C6BC /* ham_and_cheese_panini.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_cheese_panini.jpg; sourceTree = "<group>"; };
+		9C0683AC1E1EE0B900B5C6BC /* ham_and_egg_sandwich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_egg_sandwich.jpg; sourceTree = "<group>"; };
+		9C0683AD1E1EE0B900B5C6BC /* hamburger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamburger.jpg; sourceTree = "<group>"; };
+		9C0683AE1E1EE0B900B5C6BC /* instant_noodle_with_egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = instant_noodle_with_egg.jpg; sourceTree = "<group>"; };
+		9C0683AF1E1EE0B900B5C6BC /* japanese_noodle_with_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = japanese_noodle_with_pork.jpg; sourceTree = "<group>"; };
+		9C0683B01E1EE0B900B5C6BC /* mushroom_risotto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mushroom_risotto.jpg; sourceTree = "<group>"; };
+		9C0683B11E1EE0B900B5C6BC /* noodle_with_bbq_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noodle_with_bbq_pork.jpg; sourceTree = "<group>"; };
+		9C0683B21E1EE0B900B5C6BC /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
+		9C0683B31E1EE0B900B5C6BC /* starbucks_coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starbucks_coffee.jpg; sourceTree = "<group>"; };
+		9C0683B41E1EE0B900B5C6BC /* thai_shrimp_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thai_shrimp_cake.jpg; sourceTree = "<group>"; };
+		9C0683B51E1EE0B900B5C6BC /* vegetable_curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegetable_curry.jpg; sourceTree = "<group>"; };
+		9C0683B61E1EE0B900B5C6BC /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_chocolate_donut.jpg; sourceTree = "<group>"; };
+		9C0683C81E1EE48800B5C6BC /* HistoryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCollectionViewController.h; sourceTree = "<group>"; };
+		9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCollectionViewController.m; sourceTree = "<group>"; };
+		9C0683CB1E1EED0D00B5C6BC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C0683CC1E1EED0D00B5C6BC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9C45FCBA1E1FC03800B79B12 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		9C45FCBD1E1FC08800B79B12 /* DetailModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailModalViewController.h; sourceTree = "<group>"; };
+		9C45FCBE1E1FC08800B79B12 /* DetailModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailModalViewController.m; sourceTree = "<group>"; };
 		9CA06BED1E1D2DF8004C8168 /* LiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA06BF11E1D2DF8004C8168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9CA06BF61E1D2DF8004C8168 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9CA06BF71E1D2DF8004C8168 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9CA06BFA1E1D2DF8004C8168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CA06BFC1E1D2DF8004C8168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA06BFF1E1D2DF8004C8168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -105,13 +148,19 @@
 			children = (
 				9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */,
 				9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */,
-				9CA06BF61E1D2DF8004C8168 /* ViewController.h */,
-				9CA06BF71E1D2DF8004C8168 /* ViewController.m */,
 				9CA06BF91E1D2DF8004C8168 /* Main.storyboard */,
 				9CA06BFC1E1D2DF8004C8168 /* Assets.xcassets */,
 				9CA06BFE1E1D2DF8004C8168 /* LaunchScreen.storyboard */,
 				9CA06C011E1D2DF8004C8168 /* Info.plist */,
 				9CA06BF01E1D2DF8004C8168 /* Supporting Files */,
+				9C0683C81E1EE48800B5C6BC /* HistoryCollectionViewController.h */,
+				9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */,
+				9C0683CB1E1EED0D00B5C6BC /* ViewController.h */,
+				9C0683CC1E1EED0D00B5C6BC /* ViewController.m */,
+				9C45FCBA1E1FC03800B79B12 /* CalendarViewController.h */,
+				9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */,
+				9C45FCBD1E1FC08800B79B12 /* DetailModalViewController.h */,
+				9C45FCBE1E1FC08800B79B12 /* DetailModalViewController.m */,
 			);
 			path = LiftLog;
 			sourceTree = "<group>";
@@ -119,6 +168,23 @@
 		9CA06BF01E1D2DF8004C8168 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C0683A61E1EE0B900B5C6BC /* angry_birds_cake.jpg */,
+				9C0683A71E1EE0B900B5C6BC /* creme_brelee.jpg */,
+				9C0683A81E1EE0B900B5C6BC /* egg_benedict.jpg */,
+				9C0683A91E1EE0B900B5C6BC /* full_breakfast.jpg */,
+				9C0683AA1E1EE0B900B5C6BC /* green_tea.jpg */,
+				9C0683AB1E1EE0B900B5C6BC /* ham_and_cheese_panini.jpg */,
+				9C0683AC1E1EE0B900B5C6BC /* ham_and_egg_sandwich.jpg */,
+				9C0683AD1E1EE0B900B5C6BC /* hamburger.jpg */,
+				9C0683AE1E1EE0B900B5C6BC /* instant_noodle_with_egg.jpg */,
+				9C0683AF1E1EE0B900B5C6BC /* japanese_noodle_with_pork.jpg */,
+				9C0683B01E1EE0B900B5C6BC /* mushroom_risotto.jpg */,
+				9C0683B11E1EE0B900B5C6BC /* noodle_with_bbq_pork.jpg */,
+				9C0683B21E1EE0B900B5C6BC /* photo-frame.png */,
+				9C0683B31E1EE0B900B5C6BC /* starbucks_coffee.jpg */,
+				9C0683B41E1EE0B900B5C6BC /* thai_shrimp_cake.jpg */,
+				9C0683B51E1EE0B900B5C6BC /* vegetable_curry.jpg */,
+				9C0683B61E1EE0B900B5C6BC /* white_chocolate_donut.jpg */,
 				9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */,
 				9CA06BF11E1D2DF8004C8168 /* main.m */,
 			);
@@ -246,10 +312,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0683BF1E1EE0B900B5C6BC /* instant_noodle_with_egg.jpg in Resources */,
+				9C0683BC1E1EE0B900B5C6BC /* ham_and_cheese_panini.jpg in Resources */,
+				9C0683C21E1EE0B900B5C6BC /* noodle_with_bbq_pork.jpg in Resources */,
+				9C0683BE1E1EE0B900B5C6BC /* hamburger.jpg in Resources */,
+				9C0683B71E1EE0B900B5C6BC /* angry_birds_cake.jpg in Resources */,
 				9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */,
+				9C0683BD1E1EE0B900B5C6BC /* ham_and_egg_sandwich.jpg in Resources */,
 				9CA06C001E1D2DF8004C8168 /* LaunchScreen.storyboard in Resources */,
+				9C0683C11E1EE0B900B5C6BC /* mushroom_risotto.jpg in Resources */,
+				9C0683C61E1EE0B900B5C6BC /* vegetable_curry.jpg in Resources */,
+				9C0683C51E1EE0B900B5C6BC /* thai_shrimp_cake.jpg in Resources */,
+				9C0683C71E1EE0B900B5C6BC /* white_chocolate_donut.jpg in Resources */,
 				9CA06BFD1E1D2DF8004C8168 /* Assets.xcassets in Resources */,
+				9C0683C31E1EE0B900B5C6BC /* photo-frame.png in Resources */,
 				9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */,
+				9C0683C41E1EE0B900B5C6BC /* starbucks_coffee.jpg in Resources */,
+				9C0683B91E1EE0B900B5C6BC /* egg_benedict.jpg in Resources */,
+				9C0683BB1E1EE0B900B5C6BC /* green_tea.jpg in Resources */,
+				9C0683BA1E1EE0B900B5C6BC /* full_breakfast.jpg in Resources */,
+				9C0683B81E1EE0B900B5C6BC /* creme_brelee.jpg in Resources */,
+				9C0683C01E1EE0B900B5C6BC /* japanese_noodle_with_pork.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,9 +357,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA06BF81E1D2DF8004C8168 /* ViewController.m in Sources */,
 				9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */,
 				9CA06BF21E1D2DF8004C8168 /* main.m in Sources */,
+				9C0683CD1E1EED0D00B5C6BC /* ViewController.m in Sources */,
+				9C45FCBC1E1FC03800B79B12 /* CalendarViewController.m in Sources */,
+				9C0683CA1E1EE48800B5C6BC /* HistoryCollectionViewController.m in Sources */,
+				9C45FCBF1E1FC08800B79B12 /* DetailModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
