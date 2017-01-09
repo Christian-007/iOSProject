@@ -11,13 +11,15 @@
 		44F8D4ED1E23EE5A0026C5A1 /* liftlog.sql in Resources */ = {isa = PBXBuildFile; fileRef = 44F8D4E71E23ECA10026C5A1 /* liftlog.sql */; };
 		9CA06BF21E1D2DF8004C8168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF11E1D2DF8004C8168 /* main.m */; };
 		9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */; };
-		9CA06BF81E1D2DF8004C8168 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF71E1D2DF8004C8168 /* ViewController.m */; };
 		9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BF91E1D2DF8004C8168 /* Main.storyboard */; };
 		9CA06BFD1E1D2DF8004C8168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BFC1E1D2DF8004C8168 /* Assets.xcassets */; };
 		9CA06C001E1D2DF8004C8168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BFE1E1D2DF8004C8168 /* LaunchScreen.storyboard */; };
 		9CA06C0B1E1D2DF8004C8168 /* LiftLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06C0A1E1D2DF8004C8168 /* LiftLogTests.m */; };
 		9CA06C161E1D2DF8004C8168 /* LiftLogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06C151E1D2DF8004C8168 /* LiftLogUITests.m */; };
 		9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */; };
+		9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FD71E21296A00FC8FFC /* Workouts.m */; };
+		9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */; };
+		9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +46,6 @@
 		9CA06BF11E1D2DF8004C8168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9CA06BF61E1D2DF8004C8168 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9CA06BF71E1D2DF8004C8168 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9CA06BFA1E1D2DF8004C8168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CA06BFC1E1D2DF8004C8168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CA06BFF1E1D2DF8004C8168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +57,12 @@
 		9CA06C151E1D2DF8004C8168 /* LiftLogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftLogUITests.m; sourceTree = "<group>"; };
 		9CA06C171E1D2DF8004C8168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone7.jpg; sourceTree = "<group>"; };
+		9CBF0FD61E21296A00FC8FFC /* Workouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workouts.h; sourceTree = "<group>"; };
+		9CBF0FD71E21296A00FC8FFC /* Workouts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workouts.m; sourceTree = "<group>"; };
+		9CBF0FD91E212A6300FC8FFC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
+		9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
+		9CE529811E23CFD40052D2AB /* WorkoutDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutDetailViewController.h; sourceTree = "<group>"; };
+		9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,13 +117,23 @@
 			children = (
 				9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */,
 				9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */,
-				9CA06BF61E1D2DF8004C8168 /* ViewController.h */,
-				9CA06BF71E1D2DF8004C8168 /* ViewController.m */,
 				9CA06BF91E1D2DF8004C8168 /* Main.storyboard */,
 				9CA06BFC1E1D2DF8004C8168 /* Assets.xcassets */,
 				9CA06BFE1E1D2DF8004C8168 /* LaunchScreen.storyboard */,
 				9CA06C011E1D2DF8004C8168 /* Info.plist */,
 				9CA06BF01E1D2DF8004C8168 /* Supporting Files */,
+				9CBF0FD91E212A6300FC8FFC /* HomeViewController.h */,
+				9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */,
+				9C0683C81E1EE48800B5C6BC /* HistoryCollectionViewController.h */,
+				9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */,
+				9C45FCBA1E1FC03800B79B12 /* CalendarViewController.h */,
+				9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */,
+				9C45FCBD1E1FC08800B79B12 /* DetailModalViewController.h */,
+				9C45FCBE1E1FC08800B79B12 /* DetailModalViewController.m */,
+				9CBF0FD61E21296A00FC8FFC /* Workouts.h */,
+				9CBF0FD71E21296A00FC8FFC /* Workouts.m */,
+				9CE529811E23CFD40052D2AB /* WorkoutDetailViewController.h */,
+				9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */,
 			);
 			path = LiftLog;
 			sourceTree = "<group>";
@@ -255,9 +271,21 @@
 			files = (
 				44F8D4ED1E23EE5A0026C5A1 /* liftlog.sql in Resources */,
 				9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */,
+				9C0683BD1E1EE0B900B5C6BC /* ham_and_egg_sandwich.jpg in Resources */,
 				9CA06C001E1D2DF8004C8168 /* LaunchScreen.storyboard in Resources */,
+				9C0683C11E1EE0B900B5C6BC /* mushroom_risotto.jpg in Resources */,
+				9C0683C61E1EE0B900B5C6BC /* vegetable_curry.jpg in Resources */,
+				9C0683C51E1EE0B900B5C6BC /* thai_shrimp_cake.jpg in Resources */,
+				9C0683C71E1EE0B900B5C6BC /* white_chocolate_donut.jpg in Resources */,
 				9CA06BFD1E1D2DF8004C8168 /* Assets.xcassets in Resources */,
+				9C0683C31E1EE0B900B5C6BC /* photo-frame.png in Resources */,
 				9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */,
+				9C0683C41E1EE0B900B5C6BC /* starbucks_coffee.jpg in Resources */,
+				9C0683B91E1EE0B900B5C6BC /* egg_benedict.jpg in Resources */,
+				9C0683BB1E1EE0B900B5C6BC /* green_tea.jpg in Resources */,
+				9C0683BA1E1EE0B900B5C6BC /* full_breakfast.jpg in Resources */,
+				9C0683B81E1EE0B900B5C6BC /* creme_brelee.jpg in Resources */,
+				9C0683C01E1EE0B900B5C6BC /* japanese_noodle_with_pork.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,9 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA06BF81E1D2DF8004C8168 /* ViewController.m in Sources */,
 				9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */,
 				9CA06BF21E1D2DF8004C8168 /* main.m in Sources */,
+				9C45FCBC1E1FC03800B79B12 /* CalendarViewController.m in Sources */,
+				9C0683CA1E1EE48800B5C6BC /* HistoryCollectionViewController.m in Sources */,
+				9C45FCBF1E1FC08800B79B12 /* DetailModalViewController.m in Sources */,
+				9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */,
+				9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */,
+				9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
