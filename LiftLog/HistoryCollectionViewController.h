@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HistoryCollectionViewController : UICollectionViewController
+@class WorkoutDetailViewController;
 
+@interface HistoryCollectionViewController : UICollectionViewController
+@property (strong, nonatomic) WorkoutDetailViewController *workoutViewController;
+@property (strong) NSArray* workouts;
 @end

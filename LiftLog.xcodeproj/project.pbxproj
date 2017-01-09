@@ -25,7 +25,6 @@
 		9C0683C61E1EE0B900B5C6BC /* vegetable_curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B51E1EE0B900B5C6BC /* vegetable_curry.jpg */; };
 		9C0683C71E1EE0B900B5C6BC /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9C0683B61E1EE0B900B5C6BC /* white_chocolate_donut.jpg */; };
 		9C0683CA1E1EE48800B5C6BC /* HistoryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */; };
-		9C0683CD1E1EED0D00B5C6BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C0683CC1E1EED0D00B5C6BC /* ViewController.m */; };
 		9C45FCBC1E1FC03800B79B12 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */; };
 		9C45FCBF1E1FC08800B79B12 /* DetailModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C45FCBE1E1FC08800B79B12 /* DetailModalViewController.m */; };
 		9CA06BF21E1D2DF8004C8168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF11E1D2DF8004C8168 /* main.m */; };
@@ -36,6 +35,9 @@
 		9CA06C0B1E1D2DF8004C8168 /* LiftLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06C0A1E1D2DF8004C8168 /* LiftLogTests.m */; };
 		9CA06C161E1D2DF8004C8168 /* LiftLogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06C151E1D2DF8004C8168 /* LiftLogUITests.m */; };
 		9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */; };
+		9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FD71E21296A00FC8FFC /* Workouts.m */; };
+		9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */; };
+		9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +77,6 @@
 		9C0683B61E1EE0B900B5C6BC /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_chocolate_donut.jpg; sourceTree = "<group>"; };
 		9C0683C81E1EE48800B5C6BC /* HistoryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCollectionViewController.h; sourceTree = "<group>"; };
 		9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCollectionViewController.m; sourceTree = "<group>"; };
-		9C0683CB1E1EED0D00B5C6BC /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9C0683CC1E1EED0D00B5C6BC /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9C45FCBA1E1FC03800B79B12 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		9C45FCBD1E1FC08800B79B12 /* DetailModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailModalViewController.h; sourceTree = "<group>"; };
@@ -96,6 +96,12 @@
 		9CA06C151E1D2DF8004C8168 /* LiftLogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftLogUITests.m; sourceTree = "<group>"; };
 		9CA06C171E1D2DF8004C8168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone7.jpg; sourceTree = "<group>"; };
+		9CBF0FD61E21296A00FC8FFC /* Workouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workouts.h; sourceTree = "<group>"; };
+		9CBF0FD71E21296A00FC8FFC /* Workouts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workouts.m; sourceTree = "<group>"; };
+		9CBF0FD91E212A6300FC8FFC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
+		9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
+		9CE529811E23CFD40052D2AB /* WorkoutDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutDetailViewController.h; sourceTree = "<group>"; };
+		9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,14 +159,18 @@
 				9CA06BFE1E1D2DF8004C8168 /* LaunchScreen.storyboard */,
 				9CA06C011E1D2DF8004C8168 /* Info.plist */,
 				9CA06BF01E1D2DF8004C8168 /* Supporting Files */,
+				9CBF0FD91E212A6300FC8FFC /* HomeViewController.h */,
+				9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */,
 				9C0683C81E1EE48800B5C6BC /* HistoryCollectionViewController.h */,
 				9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */,
-				9C0683CB1E1EED0D00B5C6BC /* ViewController.h */,
-				9C0683CC1E1EED0D00B5C6BC /* ViewController.m */,
 				9C45FCBA1E1FC03800B79B12 /* CalendarViewController.h */,
 				9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */,
 				9C45FCBD1E1FC08800B79B12 /* DetailModalViewController.h */,
 				9C45FCBE1E1FC08800B79B12 /* DetailModalViewController.m */,
+				9CBF0FD61E21296A00FC8FFC /* Workouts.h */,
+				9CBF0FD71E21296A00FC8FFC /* Workouts.m */,
+				9CE529811E23CFD40052D2AB /* WorkoutDetailViewController.h */,
+				9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */,
 			);
 			path = LiftLog;
 			sourceTree = "<group>";
@@ -359,10 +369,12 @@
 			files = (
 				9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */,
 				9CA06BF21E1D2DF8004C8168 /* main.m in Sources */,
-				9C0683CD1E1EED0D00B5C6BC /* ViewController.m in Sources */,
 				9C45FCBC1E1FC03800B79B12 /* CalendarViewController.m in Sources */,
 				9C0683CA1E1EE48800B5C6BC /* HistoryCollectionViewController.m in Sources */,
 				9C45FCBF1E1FC08800B79B12 /* DetailModalViewController.m in Sources */,
+				9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */,
+				9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */,
+				9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

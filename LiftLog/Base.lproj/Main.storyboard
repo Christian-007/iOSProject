@@ -8,48 +8,40 @@
         <!--Home-->
         <scene sceneID="JsI-YD-ZQI">
             <objects>
-                <viewController id="iCy-cL-gn5" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="x6I-Bi-4aC"/>
-                        <viewControllerLayoutGuide type="bottom" id="p1z-WH-PhE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1Mn-vX-UCf">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iphone7.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Q0E-cS-f1t">
-                                <rect key="frame" x="108" y="176" width="198" height="374"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The world’s most advanced smartphone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="coh-sV-PWN">
-                                <rect key="frame" x="36" y="83" width="343" height="64"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA4-ql-FYw">
-                                <rect key="frame" x="165" y="570" width="85" height="28"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="23"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Introducing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhN-Ky-fUr">
-                                <rect key="frame" x="120" y="20" width="175" height="43"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="36"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
+                <viewController id="iCy-cL-gn5" customClass="HomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yo6-oD-DcV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="gXE-Xy-LwN" style="IBUITableViewCellStyleDefault" id="fr7-DX-eRS">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fr7-DX-eRS" id="4aV-OP-TWn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gXE-Xy-LwN">
+                                            <rect key="frame" x="15" y="0.0" width="384" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
                     <navigationItem key="navigationItem" title="Home" id="J1h-G4-UOV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LU6-yW-lnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="-1946"/>
+            <point key="canvasLocation" x="987" y="-1946"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EnJ-Ri-9JG">
@@ -77,7 +69,7 @@
                         <viewControllerLayoutGuide type="bottom" id="cyT-Ll-YUP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dlb-Bc-tLp">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVB-GP-cUK">
@@ -167,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="2128" y="-1063"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="taL-dp-geD">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PPt-TD-nYX" customClass="ViewController" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PPt-TD-nYX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="av0-8n-K6Q">
@@ -193,14 +185,17 @@
         <!--Home-->
         <scene sceneID="eqh-Tf-dRF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uo1-0J-IAm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="HomeIcon" id="yYy-gi-Js6"/>
+                <navigationController storyboardIdentifier="homeView" automaticallyAdjustsScrollViewInsets="NO" id="uo1-0J-IAm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="HomeIcon" selectedImage="HomeIconFilled" id="yYy-gi-Js6">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="keyPath" value=" "/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="eXW-pm-mKQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eXW-pm-mKQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -216,7 +211,7 @@
             <objects>
                 <collectionViewController id="EXu-h7-8PM" customClass="HistoryCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GDM-cx-Qtf">
-                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,21 +223,32 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="QnY-nN-8uf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="216"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hdf-dA-PHw">
-                                            <rect key="frame" x="-75" y="-34" width="489" height="255"/>
+                                            <rect key="frame" x="61" y="58" width="293" height="143"/>
                                             <animations/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I4-4z-FWC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <connections>
+                                    <segue destination="Hp2-xH-oDM" kind="show" identifier="showWorkout" id="fAe-oN-VS9"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -256,6 +262,44 @@
             </objects>
             <point key="canvasLocation" x="978" y="-215"/>
         </scene>
+        <!--Detail-->
+        <scene sceneID="hwd-Di-NY6">
+            <objects>
+                <viewController id="Hp2-xH-oDM" customClass="WorkoutDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J8h-8P-rh9"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Yf-Tm-wwS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="66V-Fb-Baj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qs3-gx-o6h">
+                                <rect key="frame" x="54" y="172" width="307" height="199"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="He5-jj-hjB">
+                                <rect key="frame" x="20" y="104" width="374" height="35"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="9AF-fx-bzf"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="imageView" destination="qs3-gx-o6h" id="oRR-3h-E5a"/>
+                        <outlet property="nameLabel" destination="He5-jj-hjB" id="zro-kJ-WJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gz1-cp-vIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1519" y="-215"/>
+        </scene>
         <!--Newsfeed-->
         <scene sceneID="Ah5-9b-dBb">
             <objects>
@@ -264,7 +308,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" id="Wab-0a-l85">
                                 <rect key="frame" x="0.0" y="92" width="414" height="200"/>
@@ -274,7 +318,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mu4-dZ-GWN">
-                                            <rect key="frame" x="8" y="7" width="398" height="183.5"/>
+                                            <rect key="frame" x="8" y="7" width="398" height="184"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Workout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COE-dx-Kyc">
                                                     <rect key="frame" x="8" y="8" width="134" height="21"/>
@@ -298,7 +342,7 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -316,7 +360,7 @@
         <scene sceneID="AnK-ra-llv">
             <objects>
                 <navigationController id="2qT-t8-2yn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Newsfeed" image="NewsIcon" id="kA2-aC-uZu"/>
+                    <tabBarItem key="tabBarItem" title="Newsfeed" image="NewsIcon" selectedImage="NewsIconFilled" id="kA2-aC-uZu"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="oPD-mn-0MD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -336,7 +380,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kZS-gr-etd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="history" id="H2e-wa-iV6"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Yif-zd-YWx">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yif-zd-YWx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
@@ -354,13 +398,16 @@
         <scene sceneID="97U-eo-LmD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0wa-Zh-INC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Calendar" image="CalendarIcon" id="enn-8B-8FE"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="CalendarIcon" selectedImage="CalendarIconFilled" id="enn-8B-8FE">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="keyPath" value="3CAE144C-08DB-4334-BB74-57F0971712E6"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="aTY-8a-TtO">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aTY-8a-TtO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <animations/>
-                        <color key="barTintColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -375,6 +422,10 @@
         <scene sceneID="ufc-VU-IYU">
             <objects>
                 <viewController id="p99-yL-eoM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qcE-HM-YY5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hch-ch-eP0"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bUj-pA-2CI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="642"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -406,6 +457,10 @@
         <scene sceneID="HG0-Dd-0Ql">
             <objects>
                 <viewController id="0cK-ZS-F0R" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sw8-Ka-cSf"/>
+                        <viewControllerLayoutGuide type="bottom" id="76T-yu-NtR"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vMW-l4-r8Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="642"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -424,6 +479,42 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R0k-0V-6h4">
+                                <rect key="frame" x="9" y="413" width="396" height="197"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WORKOUT NAME" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EG-vK-Ixi">
+                                        <rect key="frame" x="0.0" y="0.0" width="396" height="33"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6 Exercises" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-J2-I6L">
+                                        <rect key="frame" x="88" y="95" width="103" height="24"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 TIMES A WEEK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULy-cE-kP7">
+                                        <rect key="frame" x="133" y="176" width="131" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="18 Sets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB4-Vf-upm">
+                                        <rect key="frame" x="236" y="95" width="57" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -435,9 +526,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name=" " width="25" height="25"/>
         <image name="CalendarIcon" width="25" height="25"/>
+        <image name="CalendarIconFilled" width="25" height="25"/>
         <image name="HomeIcon" width="25" height="25"/>
+        <image name="HomeIconFilled" width="25" height="25"/>
         <image name="NewsIcon" width="25" height="25"/>
-        <image name="iphone7.jpg" width="290" height="590"/>
+        <image name="NewsIconFilled" width="25" height="25"/>
     </resources>
 </document>
