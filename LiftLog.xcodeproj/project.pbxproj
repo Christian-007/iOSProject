@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44F8D4EC1E23EE500026C5A1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8D4EB1E23EE500026C5A1 /* libsqlite3.tbd */; };
+		44F8D4ED1E23EE5A0026C5A1 /* liftlog.sql in Resources */ = {isa = PBXBuildFile; fileRef = 44F8D4E71E23ECA10026C5A1 /* liftlog.sql */; };
 		9CA06BF21E1D2DF8004C8168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF11E1D2DF8004C8168 /* main.m */; };
 		9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */; };
 		9CA06BF81E1D2DF8004C8168 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF71E1D2DF8004C8168 /* ViewController.m */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44F8D4E71E23ECA10026C5A1 /* liftlog.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = liftlog.sql; sourceTree = "<group>"; };
+		44F8D4EB1E23EE500026C5A1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9CA06BED1E1D2DF8004C8168 /* LiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA06BF11E1D2DF8004C8168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F8D4EC1E23EE500026C5A1 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,7 @@
 		9CA06BE41E1D2DF8004C8168 = {
 			isa = PBXGroup;
 			children = (
+				44F8D4EB1E23EE500026C5A1 /* libsqlite3.tbd */,
 				9CA06BEF1E1D2DF8004C8168 /* LiftLog */,
 				9CA06C091E1D2DF8004C8168 /* LiftLogTests */,
 				9CA06C141E1D2DF8004C8168 /* LiftLogUITests */,
@@ -119,6 +125,7 @@
 		9CA06BF01E1D2DF8004C8168 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				44F8D4E71E23ECA10026C5A1 /* liftlog.sql */,
 				9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */,
 				9CA06BF11E1D2DF8004C8168 /* main.m */,
 			);
@@ -246,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44F8D4ED1E23EE5A0026C5A1 /* liftlog.sql in Resources */,
 				9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */,
 				9CA06C001E1D2DF8004C8168 /* LaunchScreen.storyboard in Resources */,
 				9CA06BFD1E1D2DF8004C8168 /* Assets.xcassets in Resources */,
