@@ -233,19 +233,26 @@
                                             <rect key="frame" x="61" y="58" width="293" height="143"/>
                                             <animations/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I4-4z-FWC">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42"/>
+                                        <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oYR-cN-Jo2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8I4-4z-FWC">
+                                                    <rect key="frame" x="8" y="8" width="398" height="34"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
-                                            <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="Hp2-xH-oDM" kind="show" identifier="showWorkout" id="fAe-oN-VS9"/>
                                 </connections>
@@ -400,7 +407,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0wa-Zh-INC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="CalendarIcon" selectedImage="CalendarIconFilled" id="enn-8B-8FE">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="keyPath" value="3CAE144C-08DB-4334-BB74-57F0971712E6"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="keyPath" value="9B7CB56A-DD91-457A-9C2B-3B5D92CCEDE4"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -523,6 +530,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cje-CM-a5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2658" y="-763"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0r7-SQ-6nW">
+            <objects>
+                <viewController id="u1z-OW-hGn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pcn-Ja-uTu"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLK-I6-KT2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8pZ-Fn-DpF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DKC-sL-ZlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

@@ -43,6 +43,10 @@ static NSString * const reuseIdentifier = @"Cell";
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
     recipeImageView.image = [UIImage imageNamed:list.name];
     
+    UIView *viewLayer = (UIView *)[cell viewWithTag:2];
+    viewLayer.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1].CGColor;
+    viewLayer.layer.borderWidth = 1.0f;
+    
     UILabel *recipeLabel = (UILabel *)[cell viewWithTag:1];
     recipeLabel.text = list.name;
     
