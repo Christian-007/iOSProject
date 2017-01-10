@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HomeViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIButton *create;
+- (IBAction)createClicked:(id)sender;
 @property (strong) NSArray *workouts;
 @end

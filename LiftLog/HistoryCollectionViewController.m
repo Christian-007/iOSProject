@@ -21,7 +21,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // Do any additional setup after loading the view.
 }
 
@@ -40,14 +39,15 @@ static NSString * const reuseIdentifier = @"Cell";
     Workouts *list = [self.workouts objectAtIndex:indexPath.row];
     
     // Configure the cell
-    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
-    recipeImageView.image = [UIImage imageNamed:list.name];
+    //UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+    //recipeImageView.image = [UIImage imageNamed:list.name];
     
     UIView *viewLayer = (UIView *)[cell viewWithTag:2];
     viewLayer.layer.borderColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1].CGColor;
     viewLayer.layer.borderWidth = 1.0f;
     
     UILabel *recipeLabel = (UILabel *)[cell viewWithTag:1];
+    //[recipeLabel setText:[list.name uppercaseString]];
     recipeLabel.text = list.name;
     
     return cell;

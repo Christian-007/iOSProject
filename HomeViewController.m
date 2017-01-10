@@ -17,10 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"HELLO");
+    
+    // set the new workout button to have rounded edges
+    self.create.layer.cornerRadius = 20;
+    self.create.clipsToBounds = YES;
+    
+    // remove separator for empty cells
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     NSLog(@"%lu", (unsigned long)self.workouts.count);
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
 }
@@ -50,12 +56,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"this if from tableView");
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
     // Configure the cell...
     Workouts *workout = [self.workouts objectAtIndex:indexPath.row];
     cell.textLabel.text = workout.name;
-    NSLog(@"%@",cell.textLabel.text);
+    cell.detailTextLabel.text = @"2 Exercises";
     return cell;
 }
 
@@ -110,4 +116,7 @@
 }
 */
 
+- (IBAction)createClicked:(id)sender {
+    
+}
 @end

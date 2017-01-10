@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		44F8D4EC1E23EE500026C5A1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8D4EB1E23EE500026C5A1 /* libsqlite3.tbd */; };
 		44F8D4ED1E23EE5A0026C5A1 /* liftlog.sql in Resources */ = {isa = PBXBuildFile; fileRef = 44F8D4E71E23ECA10026C5A1 /* liftlog.sql */; };
+		9C405EF41E252F700073AD4F /* workout_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C405EF31E252F700073AD4F /* workout_fade.png */; };
+		9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */; };
 		9CA06BF21E1D2DF8004C8168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF11E1D2DF8004C8168 /* main.m */; };
 		9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */; };
 		9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BF91E1D2DF8004C8168 /* Main.storyboard */; };
@@ -20,6 +22,26 @@
 		9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FD71E21296A00FC8FFC /* Workouts.m */; };
 		9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */; };
 		9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */; };
+		9CE5298A1E23F23B0052D2AB /* HistoryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529841E23F23B0052D2AB /* HistoryCollectionViewController.m */; };
+		9CE5298B1E23F23B0052D2AB /* DetailModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529861E23F23B0052D2AB /* DetailModalViewController.m */; };
+		9CE5298C1E23F23B0052D2AB /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529891E23F23B0052D2AB /* CalendarViewController.m */; };
+		9CE5299E1E23F2450052D2AB /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5298D1E23F2450052D2AB /* photo-frame.png */; };
+		9CE5299F1E23F2450052D2AB /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5298E1E23F2450052D2AB /* white_chocolate_donut.jpg */; };
+		9CE529A01E23F2450052D2AB /* ham_and_egg_sandwich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5298F1E23F2450052D2AB /* ham_and_egg_sandwich.jpg */; };
+		9CE529A11E23F2450052D2AB /* hamburger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529901E23F2450052D2AB /* hamburger.jpg */; };
+		9CE529A21E23F2450052D2AB /* egg_benedict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529911E23F2450052D2AB /* egg_benedict.jpg */; };
+		9CE529A31E23F2450052D2AB /* ham_and_cheese_panini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529921E23F2450052D2AB /* ham_and_cheese_panini.jpg */; };
+		9CE529A41E23F2450052D2AB /* mushroom_risotto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529931E23F2450052D2AB /* mushroom_risotto.jpg */; };
+		9CE529A51E23F2450052D2AB /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529941E23F2450052D2AB /* full_breakfast.jpg */; };
+		9CE529A61E23F2450052D2AB /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529951E23F2450052D2AB /* creme_brelee.jpg */; };
+		9CE529A71E23F2450052D2AB /* starbucks_coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529961E23F2450052D2AB /* starbucks_coffee.jpg */; };
+		9CE529A81E23F2450052D2AB /* vegetable_curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529971E23F2450052D2AB /* vegetable_curry.jpg */; };
+		9CE529A91E23F2450052D2AB /* japanese_noodle_with_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529981E23F2450052D2AB /* japanese_noodle_with_pork.jpg */; };
+		9CE529AA1E23F2450052D2AB /* thai_shrimp_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529991E23F2450052D2AB /* thai_shrimp_cake.jpg */; };
+		9CE529AB1E23F2450052D2AB /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299A1E23F2450052D2AB /* angry_birds_cake.jpg */; };
+		9CE529AC1E23F2450052D2AB /* green_tea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299B1E23F2450052D2AB /* green_tea.jpg */; };
+		9CE529AD1E23F2450052D2AB /* instant_noodle_with_egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299C1E23F2450052D2AB /* instant_noodle_with_egg.jpg */; };
+		9CE529AE1E23F2450052D2AB /* noodle_with_bbq_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299D1E23F2450052D2AB /* noodle_with_bbq_pork.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +64,9 @@
 /* Begin PBXFileReference section */
 		44F8D4E71E23ECA10026C5A1 /* liftlog.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = liftlog.sql; sourceTree = "<group>"; };
 		44F8D4EB1E23EE500026C5A1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9C405EF31E252F700073AD4F /* workout_fade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout_fade.png; sourceTree = "<group>"; };
+		9C405EF51E25368F0073AD4F /* NewWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWorkoutViewController.h; sourceTree = "<group>"; };
+		9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWorkoutViewController.m; sourceTree = "<group>"; };
 		9CA06BED1E1D2DF8004C8168 /* LiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA06BF11E1D2DF8004C8168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +88,29 @@
 		9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
 		9CE529811E23CFD40052D2AB /* WorkoutDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutDetailViewController.h; sourceTree = "<group>"; };
 		9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkoutDetailViewController.m; sourceTree = "<group>"; };
+		9CE529841E23F23B0052D2AB /* HistoryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryCollectionViewController.m; sourceTree = "<group>"; };
+		9CE529851E23F23B0052D2AB /* HistoryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCollectionViewController.h; sourceTree = "<group>"; };
+		9CE529861E23F23B0052D2AB /* DetailModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailModalViewController.m; sourceTree = "<group>"; };
+		9CE529871E23F23B0052D2AB /* DetailModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailModalViewController.h; sourceTree = "<group>"; };
+		9CE529881E23F23B0052D2AB /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		9CE529891E23F23B0052D2AB /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		9CE5298D1E23F2450052D2AB /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
+		9CE5298E1E23F2450052D2AB /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_chocolate_donut.jpg; sourceTree = "<group>"; };
+		9CE5298F1E23F2450052D2AB /* ham_and_egg_sandwich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_egg_sandwich.jpg; sourceTree = "<group>"; };
+		9CE529901E23F2450052D2AB /* hamburger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamburger.jpg; sourceTree = "<group>"; };
+		9CE529911E23F2450052D2AB /* egg_benedict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg_benedict.jpg; sourceTree = "<group>"; };
+		9CE529921E23F2450052D2AB /* ham_and_cheese_panini.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_cheese_panini.jpg; sourceTree = "<group>"; };
+		9CE529931E23F2450052D2AB /* mushroom_risotto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mushroom_risotto.jpg; sourceTree = "<group>"; };
+		9CE529941E23F2450052D2AB /* full_breakfast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = full_breakfast.jpg; sourceTree = "<group>"; };
+		9CE529951E23F2450052D2AB /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
+		9CE529961E23F2450052D2AB /* starbucks_coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starbucks_coffee.jpg; sourceTree = "<group>"; };
+		9CE529971E23F2450052D2AB /* vegetable_curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegetable_curry.jpg; sourceTree = "<group>"; };
+		9CE529981E23F2450052D2AB /* japanese_noodle_with_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = japanese_noodle_with_pork.jpg; sourceTree = "<group>"; };
+		9CE529991E23F2450052D2AB /* thai_shrimp_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thai_shrimp_cake.jpg; sourceTree = "<group>"; };
+		9CE5299A1E23F2450052D2AB /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_birds_cake.jpg; sourceTree = "<group>"; };
+		9CE5299B1E23F2450052D2AB /* green_tea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green_tea.jpg; sourceTree = "<group>"; };
+		9CE5299C1E23F2450052D2AB /* instant_noodle_with_egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = instant_noodle_with_egg.jpg; sourceTree = "<group>"; };
+		9CE5299D1E23F2450052D2AB /* noodle_with_bbq_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noodle_with_bbq_pork.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +163,12 @@
 		9CA06BEF1E1D2DF8004C8168 /* LiftLog */ = {
 			isa = PBXGroup;
 			children = (
+				9CE529851E23F23B0052D2AB /* HistoryCollectionViewController.h */,
+				9CE529841E23F23B0052D2AB /* HistoryCollectionViewController.m */,
+				9CE529871E23F23B0052D2AB /* DetailModalViewController.h */,
+				9CE529861E23F23B0052D2AB /* DetailModalViewController.m */,
+				9CE529881E23F23B0052D2AB /* CalendarViewController.h */,
+				9CE529891E23F23B0052D2AB /* CalendarViewController.m */,
 				9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */,
 				9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */,
 				9CA06BF91E1D2DF8004C8168 /* Main.storyboard */,
@@ -124,16 +178,12 @@
 				9CA06BF01E1D2DF8004C8168 /* Supporting Files */,
 				9CBF0FD91E212A6300FC8FFC /* HomeViewController.h */,
 				9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */,
-				9C0683C81E1EE48800B5C6BC /* HistoryCollectionViewController.h */,
-				9C0683C91E1EE48800B5C6BC /* HistoryCollectionViewController.m */,
-				9C45FCBA1E1FC03800B79B12 /* CalendarViewController.h */,
-				9C45FCBB1E1FC03800B79B12 /* CalendarViewController.m */,
-				9C45FCBD1E1FC08800B79B12 /* DetailModalViewController.h */,
-				9C45FCBE1E1FC08800B79B12 /* DetailModalViewController.m */,
 				9CBF0FD61E21296A00FC8FFC /* Workouts.h */,
 				9CBF0FD71E21296A00FC8FFC /* Workouts.m */,
 				9CE529811E23CFD40052D2AB /* WorkoutDetailViewController.h */,
 				9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */,
+				9C405EF51E25368F0073AD4F /* NewWorkoutViewController.h */,
+				9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */,
 			);
 			path = LiftLog;
 			sourceTree = "<group>";
@@ -141,6 +191,24 @@
 		9CA06BF01E1D2DF8004C8168 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C405EF31E252F700073AD4F /* workout_fade.png */,
+				9CE5298D1E23F2450052D2AB /* photo-frame.png */,
+				9CE5298E1E23F2450052D2AB /* white_chocolate_donut.jpg */,
+				9CE5298F1E23F2450052D2AB /* ham_and_egg_sandwich.jpg */,
+				9CE529901E23F2450052D2AB /* hamburger.jpg */,
+				9CE529911E23F2450052D2AB /* egg_benedict.jpg */,
+				9CE529921E23F2450052D2AB /* ham_and_cheese_panini.jpg */,
+				9CE529931E23F2450052D2AB /* mushroom_risotto.jpg */,
+				9CE529941E23F2450052D2AB /* full_breakfast.jpg */,
+				9CE529951E23F2450052D2AB /* creme_brelee.jpg */,
+				9CE529961E23F2450052D2AB /* starbucks_coffee.jpg */,
+				9CE529971E23F2450052D2AB /* vegetable_curry.jpg */,
+				9CE529981E23F2450052D2AB /* japanese_noodle_with_pork.jpg */,
+				9CE529991E23F2450052D2AB /* thai_shrimp_cake.jpg */,
+				9CE5299A1E23F2450052D2AB /* angry_birds_cake.jpg */,
+				9CE5299B1E23F2450052D2AB /* green_tea.jpg */,
+				9CE5299C1E23F2450052D2AB /* instant_noodle_with_egg.jpg */,
+				9CE5299D1E23F2450052D2AB /* noodle_with_bbq_pork.jpg */,
 				44F8D4E71E23ECA10026C5A1 /* liftlog.sql */,
 				9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */,
 				9CA06BF11E1D2DF8004C8168 /* main.m */,
@@ -269,23 +337,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE529A71E23F2450052D2AB /* starbucks_coffee.jpg in Resources */,
+				9CE5299E1E23F2450052D2AB /* photo-frame.png in Resources */,
+				9CE529A21E23F2450052D2AB /* egg_benedict.jpg in Resources */,
+				9CE529A91E23F2450052D2AB /* japanese_noodle_with_pork.jpg in Resources */,
+				9CE529AE1E23F2450052D2AB /* noodle_with_bbq_pork.jpg in Resources */,
+				9CE529AD1E23F2450052D2AB /* instant_noodle_with_egg.jpg in Resources */,
+				9CE529AA1E23F2450052D2AB /* thai_shrimp_cake.jpg in Resources */,
+				9CE529A11E23F2450052D2AB /* hamburger.jpg in Resources */,
+				9CE529A61E23F2450052D2AB /* creme_brelee.jpg in Resources */,
+				9CE529A81E23F2450052D2AB /* vegetable_curry.jpg in Resources */,
+				9CE529A01E23F2450052D2AB /* ham_and_egg_sandwich.jpg in Resources */,
+				9CE529A41E23F2450052D2AB /* mushroom_risotto.jpg in Resources */,
+				9CE529A51E23F2450052D2AB /* full_breakfast.jpg in Resources */,
 				44F8D4ED1E23EE5A0026C5A1 /* liftlog.sql in Resources */,
 				9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */,
-				9C0683BD1E1EE0B900B5C6BC /* ham_and_egg_sandwich.jpg in Resources */,
 				9CA06C001E1D2DF8004C8168 /* LaunchScreen.storyboard in Resources */,
-				9C0683C11E1EE0B900B5C6BC /* mushroom_risotto.jpg in Resources */,
-				9C0683C61E1EE0B900B5C6BC /* vegetable_curry.jpg in Resources */,
-				9C0683C51E1EE0B900B5C6BC /* thai_shrimp_cake.jpg in Resources */,
-				9C0683C71E1EE0B900B5C6BC /* white_chocolate_donut.jpg in Resources */,
+				9CE529AC1E23F2450052D2AB /* green_tea.jpg in Resources */,
+				9CE529AB1E23F2450052D2AB /* angry_birds_cake.jpg in Resources */,
+				9CE5299F1E23F2450052D2AB /* white_chocolate_donut.jpg in Resources */,
 				9CA06BFD1E1D2DF8004C8168 /* Assets.xcassets in Resources */,
-				9C0683C31E1EE0B900B5C6BC /* photo-frame.png in Resources */,
+				9C405EF41E252F700073AD4F /* workout_fade.png in Resources */,
 				9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */,
-				9C0683C41E1EE0B900B5C6BC /* starbucks_coffee.jpg in Resources */,
-				9C0683B91E1EE0B900B5C6BC /* egg_benedict.jpg in Resources */,
-				9C0683BB1E1EE0B900B5C6BC /* green_tea.jpg in Resources */,
-				9C0683BA1E1EE0B900B5C6BC /* full_breakfast.jpg in Resources */,
-				9C0683B81E1EE0B900B5C6BC /* creme_brelee.jpg in Resources */,
-				9C0683C01E1EE0B900B5C6BC /* japanese_noodle_with_pork.jpg in Resources */,
+				9CE529A31E23F2450052D2AB /* ham_and_cheese_panini.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,11 +385,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */,
+				9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */,
 				9CA06BF21E1D2DF8004C8168 /* main.m in Sources */,
-				9C45FCBC1E1FC03800B79B12 /* CalendarViewController.m in Sources */,
-				9C0683CA1E1EE48800B5C6BC /* HistoryCollectionViewController.m in Sources */,
-				9C45FCBF1E1FC08800B79B12 /* DetailModalViewController.m in Sources */,
 				9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */,
+				9CE5298A1E23F23B0052D2AB /* HistoryCollectionViewController.m in Sources */,
+				9CE5298C1E23F23B0052D2AB /* CalendarViewController.m in Sources */,
+				9CE5298B1E23F23B0052D2AB /* DetailModalViewController.m in Sources */,
 				9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */,
 				9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */,
 			);
