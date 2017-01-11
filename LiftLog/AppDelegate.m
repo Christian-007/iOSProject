@@ -10,6 +10,7 @@
 #import "Workouts.h"
 #import "HomeViewController.h"
 #import "HistoryCollectionViewController.h"
+#import "NewWorkoutViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,18 +29,12 @@
     HomeViewController *homeController = [navController2.viewControllers objectAtIndex:0];
     homeController.workouts = workouts;
     
-    //NSArray *workoutImages = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"angry_birds_cake.jpg"],[[Workouts alloc]initWithName:@"ham_and_cheese_panini.jpg"], [[Workouts alloc]initWithName:@"creme_brelee.jpg"], nil];
     NSArray *workoutImages = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Overloading Workout"],[[Workouts alloc]initWithName:@"Test Workout"], [[Workouts alloc]initWithName:@"Another Workout"], nil];
     // Sending workouts array to HistoryViewController list
     UINavigationController *navControllerHistory = [navController.viewControllers objectAtIndex:2];
     HistoryCollectionViewController *historyController = [navControllerHistory.viewControllers objectAtIndex:0];
     historyController.workouts = workoutImages;
     
-    /*
-     UINavigationController *navController = (UINavigationController*)self.window.rootViewController;
-     MasterViewController *masterController = [navController.viewControllers objectAtIndex:0];
-     masterController.guitars = guitars;
-     */
     return YES;
 }
 

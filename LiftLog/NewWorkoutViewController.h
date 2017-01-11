@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewWorkoutViewController : UIViewController
+@interface NewWorkoutViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 - (IBAction)cancelClicked:(id)sender;
-
+- (IBAction)addWorkoutDay:(id)sender;
+@property (weak, nonatomic) IBOutlet UITableView *customTableView;
+@property (strong) NSMutableArray *workoutDays;
 @end

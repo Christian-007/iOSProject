@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		44F8D4EC1E23EE500026C5A1 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F8D4EB1E23EE500026C5A1 /* libsqlite3.tbd */; };
 		44F8D4ED1E23EE5A0026C5A1 /* liftlog.sql in Resources */ = {isa = PBXBuildFile; fileRef = 44F8D4E71E23ECA10026C5A1 /* liftlog.sql */; };
+		9C067B921E26513D00DAB358 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B911E26513D00DAB358 /* DayViewController.m */; };
+		9C067B951E2656AA00DAB358 /* RoutineDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B941E2656AA00DAB358 /* RoutineDay.m */; };
+		9C067B971E265FB600DAB358 /* gym_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C067B961E265FB600DAB358 /* gym_icon1.png */; };
+		9C067B9A1E2690C700DAB358 /* EditDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B991E2690C700DAB358 /* EditDayViewController.m */; };
+		9C067B9D1E26C12500DAB358 /* AddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B9C1E26C12400DAB358 /* AddExerciseTableViewController.m */; };
+		9C067BA01E26C66A00DAB358 /* CreateSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B9F1E26C66A00DAB358 /* CreateSetViewController.m */; };
+		9C067BA31E26C6AD00DAB358 /* EditSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067BA21E26C6AD00DAB358 /* EditSetViewController.m */; };
 		9C405EF41E252F700073AD4F /* workout_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C405EF31E252F700073AD4F /* workout_fade.png */; };
 		9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */; };
 		9CA06BF21E1D2DF8004C8168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF11E1D2DF8004C8168 /* main.m */; };
@@ -64,6 +71,19 @@
 /* Begin PBXFileReference section */
 		44F8D4E71E23ECA10026C5A1 /* liftlog.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = liftlog.sql; sourceTree = "<group>"; };
 		44F8D4EB1E23EE500026C5A1 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9C067B901E26513D00DAB358 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
+		9C067B911E26513D00DAB358 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
+		9C067B931E2656AA00DAB358 /* RoutineDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutineDay.h; sourceTree = "<group>"; };
+		9C067B941E2656AA00DAB358 /* RoutineDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutineDay.m; sourceTree = "<group>"; };
+		9C067B961E265FB600DAB358 /* gym_icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gym_icon1.png; sourceTree = "<group>"; };
+		9C067B981E2690C700DAB358 /* EditDayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDayViewController.h; sourceTree = "<group>"; };
+		9C067B991E2690C700DAB358 /* EditDayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDayViewController.m; sourceTree = "<group>"; };
+		9C067B9B1E26C12400DAB358 /* AddExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExerciseTableViewController.h; sourceTree = "<group>"; };
+		9C067B9C1E26C12400DAB358 /* AddExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExerciseTableViewController.m; sourceTree = "<group>"; };
+		9C067B9E1E26C66A00DAB358 /* CreateSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateSetViewController.h; sourceTree = "<group>"; };
+		9C067B9F1E26C66A00DAB358 /* CreateSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSetViewController.m; sourceTree = "<group>"; };
+		9C067BA11E26C6AD00DAB358 /* EditSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSetViewController.h; sourceTree = "<group>"; };
+		9C067BA21E26C6AD00DAB358 /* EditSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSetViewController.m; sourceTree = "<group>"; };
 		9C405EF31E252F700073AD4F /* workout_fade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout_fade.png; sourceTree = "<group>"; };
 		9C405EF51E25368F0073AD4F /* NewWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWorkoutViewController.h; sourceTree = "<group>"; };
 		9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWorkoutViewController.m; sourceTree = "<group>"; };
@@ -184,6 +204,18 @@
 				9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */,
 				9C405EF51E25368F0073AD4F /* NewWorkoutViewController.h */,
 				9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */,
+				9C067B901E26513D00DAB358 /* DayViewController.h */,
+				9C067B911E26513D00DAB358 /* DayViewController.m */,
+				9C067B931E2656AA00DAB358 /* RoutineDay.h */,
+				9C067B941E2656AA00DAB358 /* RoutineDay.m */,
+				9C067B981E2690C700DAB358 /* EditDayViewController.h */,
+				9C067B991E2690C700DAB358 /* EditDayViewController.m */,
+				9C067B9B1E26C12400DAB358 /* AddExerciseTableViewController.h */,
+				9C067B9C1E26C12400DAB358 /* AddExerciseTableViewController.m */,
+				9C067B9E1E26C66A00DAB358 /* CreateSetViewController.h */,
+				9C067B9F1E26C66A00DAB358 /* CreateSetViewController.m */,
+				9C067BA11E26C6AD00DAB358 /* EditSetViewController.h */,
+				9C067BA21E26C6AD00DAB358 /* EditSetViewController.m */,
 			);
 			path = LiftLog;
 			sourceTree = "<group>";
@@ -191,6 +223,7 @@
 		9CA06BF01E1D2DF8004C8168 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9C067B961E265FB600DAB358 /* gym_icon1.png */,
 				9C405EF31E252F700073AD4F /* workout_fade.png */,
 				9CE5298D1E23F2450052D2AB /* photo-frame.png */,
 				9CE5298E1E23F2450052D2AB /* white_chocolate_donut.jpg */,
@@ -343,6 +376,7 @@
 				9CE529A91E23F2450052D2AB /* japanese_noodle_with_pork.jpg in Resources */,
 				9CE529AE1E23F2450052D2AB /* noodle_with_bbq_pork.jpg in Resources */,
 				9CE529AD1E23F2450052D2AB /* instant_noodle_with_egg.jpg in Resources */,
+				9C067B971E265FB600DAB358 /* gym_icon1.png in Resources */,
 				9CE529AA1E23F2450052D2AB /* thai_shrimp_cake.jpg in Resources */,
 				9CE529A11E23F2450052D2AB /* hamburger.jpg in Resources */,
 				9CE529A61E23F2450052D2AB /* creme_brelee.jpg in Resources */,
@@ -384,15 +418,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C067B951E2656AA00DAB358 /* RoutineDay.m in Sources */,
 				9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */,
+				9C067B9D1E26C12500DAB358 /* AddExerciseTableViewController.m in Sources */,
+				9C067BA01E26C66A00DAB358 /* CreateSetViewController.m in Sources */,
 				9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */,
 				9CA06BF21E1D2DF8004C8168 /* main.m in Sources */,
 				9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */,
+				9C067B9A1E2690C700DAB358 /* EditDayViewController.m in Sources */,
+				9C067BA31E26C6AD00DAB358 /* EditSetViewController.m in Sources */,
 				9CE5298A1E23F23B0052D2AB /* HistoryCollectionViewController.m in Sources */,
 				9CE5298C1E23F23B0052D2AB /* CalendarViewController.m in Sources */,
 				9CE5298B1E23F23B0052D2AB /* DetailModalViewController.m in Sources */,
 				9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */,
 				9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */,
+				9C067B921E26513D00DAB358 /* DayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
