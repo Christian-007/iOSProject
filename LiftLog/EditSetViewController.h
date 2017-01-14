@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Set.h"
 
 @interface EditSetViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet UITextField *weightTextField;
+@property (weak, nonatomic) IBOutlet UITextField *repsTextField;
+- (IBAction)weightChanged:(id)sender;
+- (IBAction)repsChanged:(id)sender;
+@property (strong) Set *set;
 @end

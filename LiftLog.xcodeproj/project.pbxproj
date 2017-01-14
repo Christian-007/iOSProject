@@ -18,6 +18,8 @@
 		9C067BA31E26C6AD00DAB358 /* EditSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067BA21E26C6AD00DAB358 /* EditSetViewController.m */; };
 		9C405EF41E252F700073AD4F /* workout_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C405EF31E252F700073AD4F /* workout_fade.png */; };
 		9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */; };
+		9C7C9A031E27989C0023D930 /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C9A021E27989C0023D930 /* Exercise.m */; };
+		9C7C9A061E27AA4F0023D930 /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C9A051E27AA4F0023D930 /* Set.m */; };
 		9CA06BF21E1D2DF8004C8168 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF11E1D2DF8004C8168 /* main.m */; };
 		9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06BF41E1D2DF8004C8168 /* AppDelegate.m */; };
 		9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA06BF91E1D2DF8004C8168 /* Main.storyboard */; };
@@ -87,6 +89,10 @@
 		9C405EF31E252F700073AD4F /* workout_fade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout_fade.png; sourceTree = "<group>"; };
 		9C405EF51E25368F0073AD4F /* NewWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWorkoutViewController.h; sourceTree = "<group>"; };
 		9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWorkoutViewController.m; sourceTree = "<group>"; };
+		9C7C9A011E27989C0023D930 /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		9C7C9A021E27989C0023D930 /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		9C7C9A041E27AA4F0023D930 /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Set.h; sourceTree = "<group>"; };
+		9C7C9A051E27AA4F0023D930 /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Set.m; sourceTree = "<group>"; };
 		9CA06BED1E1D2DF8004C8168 /* LiftLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiftLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA06BF11E1D2DF8004C8168 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9CA06BF31E1D2DF8004C8168 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -101,6 +107,7 @@
 		9CA06C111E1D2DF8004C8168 /* LiftLogUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LiftLogUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA06C151E1D2DF8004C8168 /* LiftLogUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LiftLogUITests.m; sourceTree = "<group>"; };
 		9CA06C171E1D2DF8004C8168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CA375481E2A7FE8000D7FA8 /* WorkoutDayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutDayDelegate.h; sourceTree = "<group>"; };
 		9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone7.jpg; sourceTree = "<group>"; };
 		9CBF0FD61E21296A00FC8FFC /* Workouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workouts.h; sourceTree = "<group>"; };
 		9CBF0FD71E21296A00FC8FFC /* Workouts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workouts.m; sourceTree = "<group>"; };
@@ -216,6 +223,11 @@
 				9C067B9F1E26C66A00DAB358 /* CreateSetViewController.m */,
 				9C067BA11E26C6AD00DAB358 /* EditSetViewController.h */,
 				9C067BA21E26C6AD00DAB358 /* EditSetViewController.m */,
+				9C7C9A011E27989C0023D930 /* Exercise.h */,
+				9C7C9A021E27989C0023D930 /* Exercise.m */,
+				9C7C9A041E27AA4F0023D930 /* Set.h */,
+				9C7C9A051E27AA4F0023D930 /* Set.m */,
+				9CA375481E2A7FE8000D7FA8 /* WorkoutDayDelegate.h */,
 			);
 			path = LiftLog;
 			sourceTree = "<group>";
@@ -425,12 +437,14 @@
 				9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */,
 				9CA06BF21E1D2DF8004C8168 /* main.m in Sources */,
 				9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */,
+				9C7C9A061E27AA4F0023D930 /* Set.m in Sources */,
 				9C067B9A1E2690C700DAB358 /* EditDayViewController.m in Sources */,
 				9C067BA31E26C6AD00DAB358 /* EditSetViewController.m in Sources */,
 				9CE5298A1E23F23B0052D2AB /* HistoryCollectionViewController.m in Sources */,
 				9CE5298C1E23F23B0052D2AB /* CalendarViewController.m in Sources */,
 				9CE5298B1E23F23B0052D2AB /* DetailModalViewController.m in Sources */,
 				9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */,
+				9C7C9A031E27989C0023D930 /* Exercise.m in Sources */,
 				9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */,
 				9C067B921E26513D00DAB358 /* DayViewController.m in Sources */,
 			);

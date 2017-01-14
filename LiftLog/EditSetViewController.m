@@ -16,6 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.weightTextField.text = self.set.weight;
+    self.weightTextField.keyboardType = UIKeyboardTypeNumberPad;
+    self.repsTextField.text = self.set.reps;
+    self.repsTextField.keyboardType = UIKeyboardTypeNumberPad;
     // Do any additional setup after loading the view.
 }
 
@@ -34,4 +39,11 @@
 }
 */
 
+- (IBAction)weightChanged:(id)sender {
+    self.set.weight = self.weightTextField.text;
+}
+
+- (IBAction)repsChanged:(id)sender {
+    self.set.reps = self.repsTextField.text;
+}
 @end

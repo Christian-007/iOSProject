@@ -7,6 +7,7 @@
 //
 
 #import "AddExerciseTableViewController.h"
+#import "CreateSetViewController.h"
 
 @interface AddExerciseTableViewController ()
 
@@ -16,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.exerciseArray = [NSArray arrayWithObjects:[[Exercise alloc]initWithTitle:@"Chest Exercise"], [[Exercise alloc]initWithTitle:@"Shoulder Exercise"], [[Exercise alloc]initWithTitle:@"Legs Exercise"], [[Exercise alloc]initWithTitle:@"Arm Exercise"], nil];
+
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,24 +36,31 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.exerciseArray.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    Exercise *exc = [self.exerciseArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = exc.title;
     return cell;
 }
-*/
+
+ #pragma mark - Navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     if ([[segue identifier] isEqualToString:@"editExercise"]) {
+         CreateSetViewController *create = [segue destinationViewController];
+         create.workoutDayDelegate = self.workoutDayDelegate;
+         create.exercise = [self.exerciseArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+     }
+ }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -82,16 +93,6 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 */
 

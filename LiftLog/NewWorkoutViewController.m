@@ -59,10 +59,10 @@
 
 // Sending the selected cell data to DayViewController class
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDay"]) {
+    /*if ([[segue identifier] isEqualToString:@"showDay"]) {
         DayViewController *d = [segue destinationViewController];
         d.day = [self.workoutDays objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
-    }
+    }*/
     if ([[segue identifier] isEqualToString:@"editDay"]) {
         DayViewController *d = [segue destinationViewController];
         d.day = [self.workoutDays objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
