@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4409CF421E2D8F300042F33F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4409CF401E2D8F300042F33F /* Model.xcdatamodeld */; };
+		44C5ED331E2E68B400D8EEBA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C5ED321E2E68B400D8EEBA /* CoreData.framework */; };
 		9C067B921E26513D00DAB358 /* DayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B911E26513D00DAB358 /* DayViewController.m */; };
 		9C067B951E2656AA00DAB358 /* RoutineDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B941E2656AA00DAB358 /* RoutineDay.m */; };
 		9C067B971E265FB600DAB358 /* gym_icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C067B961E265FB600DAB358 /* gym_icon1.png */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		4409CF411E2D8F300042F33F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		44C5ED321E2E68B400D8EEBA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9C067B901E26513D00DAB358 /* DayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayViewController.h; sourceTree = "<group>"; };
 		9C067B911E26513D00DAB358 /* DayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayViewController.m; sourceTree = "<group>"; };
 		9C067B931E2656AA00DAB358 /* RoutineDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutineDay.h; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44C5ED331E2E68B400D8EEBA /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +148,7 @@
 		9CA06BE41E1D2DF8004C8168 = {
 			isa = PBXGroup;
 			children = (
+				44C5ED321E2E68B400D8EEBA /* CoreData.framework */,
 				9CA06BEF1E1D2DF8004C8168 /* LiftLog */,
 				9CA06C091E1D2DF8004C8168 /* LiftLogTests */,
 				9CA06C141E1D2DF8004C8168 /* LiftLogUITests */,
