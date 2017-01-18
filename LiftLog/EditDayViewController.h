@@ -17,6 +17,7 @@
 @interface EditDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, WorkoutDayDelegate>
 @property (strong) RoutineDay *day;
 @property (strong) Exercise *exc;
+@property (weak, nonatomic) IBOutlet UITextField *routineDayTextField;
 @property (strong) Set *set;
 - (IBAction)addExerciseButton:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *addbutton;

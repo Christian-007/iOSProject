@@ -71,6 +71,7 @@
 }
 
 - (IBAction)addExerciseButton:(id)sender {
+    
     [self performSegueWithIdentifier:@"addExercise" sender:self];
 }
 

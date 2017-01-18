@@ -8,60 +8,63 @@
 
 #import "AddWorkoutTableViewController.h"
 #import "ShowWorkoutDetailTableViewController.h"
-#import "Workouts.h"
 
 @implementation AddWorkoutTableViewController
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    self.workouts = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Overloading Workout"], nil];
-    self.detailWorkouts = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Arnold Press"], [[Workouts alloc]initWithName:@"Flat Bench Press"], [[Workouts alloc]initWithName:@"Dumbbell Fly"], nil];
+    NSArray *day1 = [NSArray arrayWithObjects:[[RoutineDay alloc]initWithDay:@"Chest Day"], [[RoutineDay alloc]initWithDay:@"Shoulder Day"], nil];
+    
+    NSArray *day2 = [NSArray arrayWithObjects:[[RoutineDay alloc]initWithDay:@"Arms Day"], [[RoutineDay alloc]initWithDay:@"Legs Day"], [[RoutineDay alloc]initWithDay:@"Cardio"], nil];
+    
+    self.workoutDays = [NSArray arrayWithObjects:day1, day2, nil];
+    
+    self.workoutName = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Overloading Workout"],[[Workouts alloc]initWithName:@"Shoulder Workout"], nil];
+    
+    self.arrayOfExercises = [NSMutableArray arrayWithObjects:[[Exercise alloc]initWithTitle:@"Shoulder Press"], [[Exercise alloc]initWithTitle:@"Lateral Raises"], nil];
+    
+    self.detailWorkouts2 = [NSArray arrayWithObjects:[[Exercise alloc]initWithTitle:@"Flat Barbell Bench Press"], [[Exercise alloc]initWithTitle:@"Incline Dumbbell Press"], nil];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:[[Set alloc]initWithSetNumber:1 withReps:@"10" withWeight:@"25"], [[Set alloc]initWithSetNumber:2 withReps:@"8" withWeight:@"30"], nil];
+    self.setOfWorkouts = [NSMutableArray arrayWithObjects:array, array, nil];
+
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.workoutDays.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.workouts.count;
+    return [[self.workoutDays objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"routineCell" forIndexPath:indexPath];
-    //UITableViewCell *detailCell = [tableView dequeueReusableCellWithIdentifier:@"detailCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    Workouts *workout = [self.workouts objectAtIndex:indexPath.row];
-    cell.textLabel.text = workout.name;
-    
-    Workouts *w = [self.detailWorkouts objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@\n", w.name];
-    //cell.imageView.image = [UIImage imageNamed:@"gym_icon1.jpg"];
-    
-    //Workouts *w = [self.detailWorkouts objectAtIndex:indexPath.row];
-    //detailCell.textLabel.text = w.name;
-
-    
+    RoutineDay *list = [self.workoutDays[indexPath.section] objectAtIndex:indexPath.row];
+    cell.textLabel.text = list.title;
     return cell;
 }
 
-#pragma mark - Navigation
-
-// Sending the selected cell data to DayViewController class
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    /*if ([[segue identifier] isEqualToString:@"showDay"]) {
-     DayViewController *d = [segue destinationViewController];
-     d.day = [self.workoutDays objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
-     }*/
-    if ([[segue identifier] isEqualToString:@"showDay"]) {
-        ShowWorkoutDetailTableViewController *s = [segue destinationViewController];
-        s.workout= [self.workouts objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-    }
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    Workouts *workoutName = [self.workoutName objectAtIndex:section];
+    return workoutName.name;
 }
 
 - (IBAction)donePressed:(id)sender {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Get the workout day --> search for the exercises that are belong to that workout day
+    // Search for the sets of the corresponding exercise
+    RoutineDay *rd = [self.workoutDays[indexPath.section] objectAtIndex:indexPath.row];
+    NSLog(@"%@", rd.title);
+    [self.calendarDayDelegate updateWithExercise:self.arrayOfExercises withSets:self.setOfWorkouts];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

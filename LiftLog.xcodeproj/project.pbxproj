@@ -30,6 +30,7 @@
 		9CA06C0B1E1D2DF8004C8168 /* LiftLogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06C0A1E1D2DF8004C8168 /* LiftLogTests.m */; };
 		9CA06C161E1D2DF8004C8168 /* LiftLogUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA06C151E1D2DF8004C8168 /* LiftLogUITests.m */; };
 		9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */; };
+		9CBE11501E2E893400FA851F /* Curls With Dumbbells Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CBE114F1E2E893400FA851F /* Curls With Dumbbells Filled-100.png */; };
 		9CBF0FD81E21296A00FC8FFC /* Workouts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FD71E21296A00FC8FFC /* Workouts.m */; };
 		9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CBF0FDA1E212A6300FC8FFC /* HomeViewController.m */; };
 		9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529821E23CFD40052D2AB /* WorkoutDetailViewController.m */; };
@@ -37,22 +38,6 @@
 		9CE5298B1E23F23B0052D2AB /* DetailModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529861E23F23B0052D2AB /* DetailModalViewController.m */; };
 		9CE5298C1E23F23B0052D2AB /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CE529891E23F23B0052D2AB /* CalendarViewController.m */; };
 		9CE5299E1E23F2450052D2AB /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5298D1E23F2450052D2AB /* photo-frame.png */; };
-		9CE5299F1E23F2450052D2AB /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5298E1E23F2450052D2AB /* white_chocolate_donut.jpg */; };
-		9CE529A01E23F2450052D2AB /* ham_and_egg_sandwich.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5298F1E23F2450052D2AB /* ham_and_egg_sandwich.jpg */; };
-		9CE529A11E23F2450052D2AB /* hamburger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529901E23F2450052D2AB /* hamburger.jpg */; };
-		9CE529A21E23F2450052D2AB /* egg_benedict.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529911E23F2450052D2AB /* egg_benedict.jpg */; };
-		9CE529A31E23F2450052D2AB /* ham_and_cheese_panini.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529921E23F2450052D2AB /* ham_and_cheese_panini.jpg */; };
-		9CE529A41E23F2450052D2AB /* mushroom_risotto.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529931E23F2450052D2AB /* mushroom_risotto.jpg */; };
-		9CE529A51E23F2450052D2AB /* full_breakfast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529941E23F2450052D2AB /* full_breakfast.jpg */; };
-		9CE529A61E23F2450052D2AB /* creme_brelee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529951E23F2450052D2AB /* creme_brelee.jpg */; };
-		9CE529A71E23F2450052D2AB /* starbucks_coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529961E23F2450052D2AB /* starbucks_coffee.jpg */; };
-		9CE529A81E23F2450052D2AB /* vegetable_curry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529971E23F2450052D2AB /* vegetable_curry.jpg */; };
-		9CE529A91E23F2450052D2AB /* japanese_noodle_with_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529981E23F2450052D2AB /* japanese_noodle_with_pork.jpg */; };
-		9CE529AA1E23F2450052D2AB /* thai_shrimp_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE529991E23F2450052D2AB /* thai_shrimp_cake.jpg */; };
-		9CE529AB1E23F2450052D2AB /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299A1E23F2450052D2AB /* angry_birds_cake.jpg */; };
-		9CE529AC1E23F2450052D2AB /* green_tea.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299B1E23F2450052D2AB /* green_tea.jpg */; };
-		9CE529AD1E23F2450052D2AB /* instant_noodle_with_egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299C1E23F2450052D2AB /* instant_noodle_with_egg.jpg */; };
-		9CE529AE1E23F2450052D2AB /* noodle_with_bbq_pork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5299D1E23F2450052D2AB /* noodle_with_bbq_pork.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +100,8 @@
 		9CA06C171E1D2DF8004C8168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CA375481E2A7FE8000D7FA8 /* WorkoutDayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutDayDelegate.h; sourceTree = "<group>"; };
 		9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iphone7.jpg; sourceTree = "<group>"; };
+		9CBE114E1E2E790500FA851F /* CalendarDayDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayDelegate.h; sourceTree = "<group>"; };
+		9CBE114F1E2E893400FA851F /* Curls With Dumbbells Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Curls With Dumbbells Filled-100.png"; sourceTree = "<group>"; };
 		9CBF0FD61E21296A00FC8FFC /* Workouts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Workouts.h; sourceTree = "<group>"; };
 		9CBF0FD71E21296A00FC8FFC /* Workouts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Workouts.m; sourceTree = "<group>"; };
 		9CBF0FD91E212A6300FC8FFC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
@@ -128,22 +115,6 @@
 		9CE529881E23F23B0052D2AB /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		9CE529891E23F23B0052D2AB /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		9CE5298D1E23F2450052D2AB /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
-		9CE5298E1E23F2450052D2AB /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_chocolate_donut.jpg; sourceTree = "<group>"; };
-		9CE5298F1E23F2450052D2AB /* ham_and_egg_sandwich.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_egg_sandwich.jpg; sourceTree = "<group>"; };
-		9CE529901E23F2450052D2AB /* hamburger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hamburger.jpg; sourceTree = "<group>"; };
-		9CE529911E23F2450052D2AB /* egg_benedict.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = egg_benedict.jpg; sourceTree = "<group>"; };
-		9CE529921E23F2450052D2AB /* ham_and_cheese_panini.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ham_and_cheese_panini.jpg; sourceTree = "<group>"; };
-		9CE529931E23F2450052D2AB /* mushroom_risotto.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mushroom_risotto.jpg; sourceTree = "<group>"; };
-		9CE529941E23F2450052D2AB /* full_breakfast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = full_breakfast.jpg; sourceTree = "<group>"; };
-		9CE529951E23F2450052D2AB /* creme_brelee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = creme_brelee.jpg; sourceTree = "<group>"; };
-		9CE529961E23F2450052D2AB /* starbucks_coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = starbucks_coffee.jpg; sourceTree = "<group>"; };
-		9CE529971E23F2450052D2AB /* vegetable_curry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vegetable_curry.jpg; sourceTree = "<group>"; };
-		9CE529981E23F2450052D2AB /* japanese_noodle_with_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = japanese_noodle_with_pork.jpg; sourceTree = "<group>"; };
-		9CE529991E23F2450052D2AB /* thai_shrimp_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = thai_shrimp_cake.jpg; sourceTree = "<group>"; };
-		9CE5299A1E23F2450052D2AB /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_birds_cake.jpg; sourceTree = "<group>"; };
-		9CE5299B1E23F2450052D2AB /* green_tea.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = green_tea.jpg; sourceTree = "<group>"; };
-		9CE5299C1E23F2450052D2AB /* instant_noodle_with_egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = instant_noodle_with_egg.jpg; sourceTree = "<group>"; };
-		9CE5299D1E23F2450052D2AB /* noodle_with_bbq_pork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = noodle_with_bbq_pork.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,26 +183,11 @@
 		9CA06BF01E1D2DF8004C8168 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CBE114F1E2E893400FA851F /* Curls With Dumbbells Filled-100.png */,
 				9C5EA0C81E2D214600ED5FCF /* Sports Mode Filled-100.png */,
 				9C067B961E265FB600DAB358 /* gym_icon1.png */,
 				9C405EF31E252F700073AD4F /* workout_fade.png */,
 				9CE5298D1E23F2450052D2AB /* photo-frame.png */,
-				9CE5298E1E23F2450052D2AB /* white_chocolate_donut.jpg */,
-				9CE5298F1E23F2450052D2AB /* ham_and_egg_sandwich.jpg */,
-				9CE529901E23F2450052D2AB /* hamburger.jpg */,
-				9CE529911E23F2450052D2AB /* egg_benedict.jpg */,
-				9CE529921E23F2450052D2AB /* ham_and_cheese_panini.jpg */,
-				9CE529931E23F2450052D2AB /* mushroom_risotto.jpg */,
-				9CE529941E23F2450052D2AB /* full_breakfast.jpg */,
-				9CE529951E23F2450052D2AB /* creme_brelee.jpg */,
-				9CE529961E23F2450052D2AB /* starbucks_coffee.jpg */,
-				9CE529971E23F2450052D2AB /* vegetable_curry.jpg */,
-				9CE529981E23F2450052D2AB /* japanese_noodle_with_pork.jpg */,
-				9CE529991E23F2450052D2AB /* thai_shrimp_cake.jpg */,
-				9CE5299A1E23F2450052D2AB /* angry_birds_cake.jpg */,
-				9CE5299B1E23F2450052D2AB /* green_tea.jpg */,
-				9CE5299C1E23F2450052D2AB /* instant_noodle_with_egg.jpg */,
-				9CE5299D1E23F2450052D2AB /* noodle_with_bbq_pork.jpg */,
 				9CBD6CD61E1DAE3700735E78 /* iphone7.jpg */,
 				9CA06BF11E1D2DF8004C8168 /* main.m */,
 			);
@@ -294,6 +250,7 @@
 		9CE028751E2C0583005FADAE /* CalendarTabClasses */ = {
 			isa = PBXGroup;
 			children = (
+				9CBE114E1E2E790500FA851F /* CalendarDayDelegate.h */,
 				9CE529881E23F23B0052D2AB /* CalendarViewController.h */,
 				9CE529891E23F23B0052D2AB /* CalendarViewController.m */,
 				9C5EA0CA1E2D255200ED5FCF /* AddWorkoutTableViewController.h */,
@@ -422,30 +379,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CE529A71E23F2450052D2AB /* starbucks_coffee.jpg in Resources */,
+				9CBE11501E2E893400FA851F /* Curls With Dumbbells Filled-100.png in Resources */,
 				9CE5299E1E23F2450052D2AB /* photo-frame.png in Resources */,
-				9CE529A21E23F2450052D2AB /* egg_benedict.jpg in Resources */,
-				9CE529A91E23F2450052D2AB /* japanese_noodle_with_pork.jpg in Resources */,
-				9CE529AE1E23F2450052D2AB /* noodle_with_bbq_pork.jpg in Resources */,
-				9CE529AD1E23F2450052D2AB /* instant_noodle_with_egg.jpg in Resources */,
 				9C067B971E265FB600DAB358 /* gym_icon1.png in Resources */,
-				9CE529AA1E23F2450052D2AB /* thai_shrimp_cake.jpg in Resources */,
-				9CE529A11E23F2450052D2AB /* hamburger.jpg in Resources */,
-				9CE529A61E23F2450052D2AB /* creme_brelee.jpg in Resources */,
-				9CE529A81E23F2450052D2AB /* vegetable_curry.jpg in Resources */,
-				9CE529A01E23F2450052D2AB /* ham_and_egg_sandwich.jpg in Resources */,
-				9CE529A41E23F2450052D2AB /* mushroom_risotto.jpg in Resources */,
-				9CE529A51E23F2450052D2AB /* full_breakfast.jpg in Resources */,
 				9CBD6CD71E1DAE3700735E78 /* iphone7.jpg in Resources */,
 				9CA06C001E1D2DF8004C8168 /* LaunchScreen.storyboard in Resources */,
 				9C5EA0C91E2D214600ED5FCF /* Sports Mode Filled-100.png in Resources */,
-				9CE529AC1E23F2450052D2AB /* green_tea.jpg in Resources */,
-				9CE529AB1E23F2450052D2AB /* angry_birds_cake.jpg in Resources */,
-				9CE5299F1E23F2450052D2AB /* white_chocolate_donut.jpg in Resources */,
 				9CA06BFD1E1D2DF8004C8168 /* Assets.xcassets in Resources */,
 				9C405EF41E252F700073AD4F /* workout_fade.png in Resources */,
 				9CA06BFB1E1D2DF8004C8168 /* Main.storyboard in Resources */,
-				9CE529A31E23F2450052D2AB /* ham_and_cheese_panini.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

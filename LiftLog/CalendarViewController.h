@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Workouts.h"
+#import "RoutineDay.h"
+#import "Exercise.h"
+#import "Set.h"
+#import "AddWorkoutTableViewController.h"
+#import "CalendarDayDelegate.h"
 
-@interface CalendarViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface CalendarViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, CalendarDayDelegate>
 - (IBAction)backClicked:(id)sender;
 - (IBAction)forwardClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *dateNow;
@@ -16,4 +22,6 @@
 @property (strong) NSDate *today;
 @property (strong) NSArray *workoutLog;
 @property (strong) NSArray *routineName;
+@property (strong) NSMutableArray *exerciseArray;
+@property (strong) NSMutableArray *setsArray;
 @end
