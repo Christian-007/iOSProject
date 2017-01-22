@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Set.h"
+#import "SetCD.h"
 
 @interface EditSetViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *weightTextField;
@@ -15,4 +16,7 @@
 - (IBAction)weightChanged:(id)sender;
 - (IBAction)repsChanged:(id)sender;
 @property (strong) Set *set;
+
+@property (nonatomic, strong) SetCD *addSetCD;
+
 @end

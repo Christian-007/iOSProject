@@ -67,7 +67,7 @@
         setCD.exercise = self.exerciseCD;
         NSLog(@"Set Successfully created!");
         self.addSetCD = setCD;
-
+        
         self.addSetCD.reps = @"0";
         self.addSetCD.weight = @"0";
         
@@ -78,23 +78,21 @@
         //self.addSetCD.exercise = //
         //self.addSetCD.setNumber;
         
-        
-        
-        //[self.setArray addObject:[[Set alloc]initWithSetNumber:(int)self.setArray.count+1 withReps:@"10" withWeight:@"20"]];
-        
-//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.fetchedResultsController.fetchedObjects.count-1 inSection:0];
-//        NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
-//        [self.customTableView insertRowsAtIndexPaths:indexPaths withRowAnimation:YES];
-//        [self.customTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
-//        
+        EditSetViewController *editSetViewController = [segue destinationViewController];
+        editSetViewController.addSetCD = self.addSetCD;
+    }
+    
+    if ([[segue identifier] isEqualToString:@"showSet"]) {
 //        EditSetViewController *e = [segue destinationViewController];
 //        self.sets = [self.setArray objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
 //        e.set = self.sets;
-    }
-    if ([[segue identifier] isEqualToString:@"showSet"]) {
-        EditSetViewController *e = [segue destinationViewController];
-        self.sets = [self.setArray objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
-        e.set = self.sets;
+        EditSetViewController *editSetViewController = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.customTableView indexPathForSelectedRow];
+        
+        SetCD *setCD = (SetCD *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+        
+        NSLog(@"Number of Sets %lu", [[self.fetchedResultsController sections]count]);
+        editSetViewController.addSetCD = setCD;
     }
 
 }
@@ -102,7 +100,7 @@
 - (IBAction)addSet:(id)sender {
     [self performSegueWithIdentifier:@"addSet" sender:self];
 }
-
+ /*
 - (IBAction)doneClicked:(id)sender {
     // Send data back to prev ViewController through delegate
     [self.workoutDayDelegate updateWithExercise:self.exercise withSets:self.setArray];
@@ -111,9 +109,31 @@
     NSArray *array = [self.navigationController viewControllers];
     [self.navigationController popToViewController:[array objectAtIndex:1] animated: YES];
 
-}
+}*/
 
 #pragma mark - Table view data source
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        NSManagedObjectContext *context = [self managedObjectContext];
+        SetCD *setToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [context deleteObject:setToDelete];
+        
+        NSError *error = nil;
+        
+        if (![context save:&error]) {
+            NSLog(@"Error!!! %@", error);
+        }
+        //[self.objects removeObjectAtIndex:indexPath.row];
+        //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+    /*
+     else if (editingStyle == UITableViewCellEditingStyleInsert) {
+     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+     }
+     */
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     NSLog(@"numberOfSectionsInTableView = %lu", [[self.fetchedResultsController sections]count]);
@@ -132,11 +152,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     SetCD *setCD = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    self.setLabel = (UILabel *)[cell viewWithTag:1];
     self.weightLabel = (UILabel *)[cell viewWithTag:2];
     self.repsLabel = (UILabel *)[cell viewWithTag:3];
-    
-    self.setLabel.text = [NSString stringWithFormat:@"%d", (int)setCD.setNumber];
+
     self.weightLabel.text = [NSString stringWithFormat:@"%@ kgs", setCD.weight];
     self.repsLabel.text = [NSString stringWithFormat:@"%@", setCD.reps];
 
@@ -238,7 +256,7 @@
             NSLog(@"NSFetchedResultsChangeUpdate:");
             SetCD *changeSetCD = [self.fetchedResultsController objectAtIndexPath:indexPath];
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            //cell.textLabel.text = changeRoutineDayCD.title;
+            //cell.textLabel.text = changeSetDayCD.title;
         }
             break;
         case NSFetchedResultsChangeMove:

@@ -20,7 +20,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *newset;
 @property (weak, nonatomic) IBOutlet UITableView *customTableView;
 - (IBAction)addSet:(id)sender;
-- (IBAction)doneClicked:(id)sender;
 @property (strong) Set *sets;
 @property (strong) Exercise *exercise;
 @property (strong) NSMutableArray *setArray;
