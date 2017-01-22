@@ -10,6 +10,7 @@
 #import "Exercise.h"
 #import "Set.h"
 #import "SetCD.h"
+#import "ExerciseCD.h"
 #import "EditSetViewController.h"
 #import "WorkoutDayDelegate.h"
 #import "AppDelegate.h"

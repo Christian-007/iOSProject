@@ -131,7 +131,7 @@
         <!--Edit Routine Day-->
         <scene sceneID="qqz-zN-IaU">
             <objects>
-                <viewController id="ZUV-vc-aqu" customClass="EditDayViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ZUV-vc-aqu" customClass="EditDayViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eRd-ix-T7Q"/>
                         <viewControllerLayoutGuide type="bottom" id="MW3-Y3-l2Q"/>
@@ -146,7 +146,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" textLabel="8dL-RZ-h7G" detailTextLabel="NHU-3Y-Vmw" style="IBUITableViewCellStyleSubtitle" id="bqJ-S1-YOC">
-                                        <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bqJ-S1-YOC" id="thU-Yz-U3J">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -255,9 +255,6 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <connections>
-                                    <segue destination="trA-1y-lw2" kind="show" identifier="editExercise" id="xdI-JO-muM"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1279,7 +1276,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K77-9V-bv2"/>
-        <segue reference="xdI-JO-muM"/>
-        <segue reference="NMb-j7-Xen"/>
+        <segue reference="1Dc-3V-Vi4"/>
     </inferredMetricsTieBreakers>
 </document>

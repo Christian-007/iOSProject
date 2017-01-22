@@ -11,6 +11,8 @@
 
 @interface AddExerciseTableViewController ()
 
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
 @end
 
 @implementation AddExerciseTableViewController
@@ -30,6 +32,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    //NSError *error = nil;
+    
+//    if (![[self fetchedResultsController]performFetch:&error]) {
+//        NSLog(@"Error! %@", error);
+//        abort();
+//    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +64,12 @@
     //Exercise *exc = [self.exerciseCDArray objectAtIndex:indexPath.row];
     cell.textLabel.text = [self.exerciseCDArray objectAtIndex:indexPath.row];
     return cell;
+}
+
+// Add exercise to the Exercise (Core Data entity) when the user clicked on one of the lists
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.addExerciseCD.title = [self.exerciseCDArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(NSManagedObjectContext*)managedObjectContext {
@@ -143,5 +158,8 @@
     return YES;
 }
 */
+
+
+
 
 @end

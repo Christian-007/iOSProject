@@ -24,12 +24,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    NSError *error = nil;
+    
+    if (![[self fetchedResultsController]performFetch:&error]) {
+        NSLog(@"Error! %@", error);
+        abort();
+    }
+    
     self.newset.layer.cornerRadius = 20;
     self.newset.clipsToBounds = YES;
     
     self.setArray = [[NSMutableArray alloc]init];
-    //addSetCD.exercise.
-   // NSLog(@"", addSetCD.exercise.)
+    //ExerciseCD *exe;
+    NSLog(@" Exercise Title %@", self.exerciseCD.title);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -183,9 +191,9 @@
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"reps" ascending:YES];
     
-    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"exercise = %@", addSetCD.exercise];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"exercise = %@", self.exerciseCD];
     
-    //[fetchRequest setPredicate:predicate];
+    [fetchRequest setPredicate:predicate];
     
     NSArray *sortDescriptors = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
     

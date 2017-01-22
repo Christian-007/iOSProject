@@ -13,7 +13,7 @@
 #import "SetCD.h"
 #import "AppDelegate.h"
 
-@interface AddExerciseTableViewController : UITableViewController
+@interface AddExerciseTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 @property (weak) id<WorkoutDayDelegate> workoutDayDelegate;
 @property (strong) NSMutableArray *exercises;
 @property (strong) NSArray *exerciseArray;

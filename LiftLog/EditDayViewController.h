@@ -17,7 +17,7 @@
 #import "WorkoutDayDelegate.h"
 #import "AppDelegate.h"
 
-@interface EditDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, WorkoutDayDelegate>
+@interface EditDayViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, WorkoutDayDelegate, NSFetchedResultsControllerDelegate>
 @property (strong) RoutineDay *day;
 @property (strong) Exercise *exc;
 @property (weak, nonatomic) IBOutlet UITextField *routineDayTextField;
