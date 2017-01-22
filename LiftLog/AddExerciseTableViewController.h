@@ -9,9 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "WorkoutDayDelegate.h"
 #import "Exercise.h"
+#import "ExerciseCD.h"
+#import "SetCD.h"
+#import "AppDelegate.h"
 
 @interface AddExerciseTableViewController : UITableViewController
 @property (weak) id<WorkoutDayDelegate> workoutDayDelegate;
 @property (strong) NSMutableArray *exercises;
 @property (strong) NSArray *exerciseArray;
+@property (strong) NSArray *exerciseCDArray;
+
+@property (nonatomic, strong) ExerciseCD *addExerciseCD;
+@property (nonatomic, strong) ExerciseCD *addSetCD;
+
 @end

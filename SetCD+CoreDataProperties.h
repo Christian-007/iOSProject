@@ -2,7 +2,7 @@
 //  SetCD+CoreDataProperties.h
 //  LiftLog
 //
-//  Created by Andrejus Skulis on 21/01/2017.
+//  Created by Andrejus Skulis on 22/01/2017.
 //  Copyright © 2017 Christian Ing. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *reps;
 @property (nullable, nonatomic, retain) NSNumber *setNumber;
 @property (nullable, nonatomic, retain) NSString *weight;
-@property (nullable, nonatomic, retain) NSManagedObject *exercise;
+@property (nullable, nonatomic, retain) ExerciseCD *exercise;
 
 @end
 

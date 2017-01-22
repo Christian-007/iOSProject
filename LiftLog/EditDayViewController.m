@@ -10,9 +10,13 @@
 
 @interface EditDayViewController ()
 
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
 @end
 
 @implementation EditDayViewController
+
+@synthesize addRoutineDayCD, addExerciseCD;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,6 +34,10 @@
     self.navigationController.view.backgroundColor = [UIColor whiteColor]; // remove annoying dark gray bg color during segue transition
 }
 
+-(NSManagedObjectContext*)managedObjectContext {
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -39,10 +47,32 @@
 
 // Sending the selected cell data to DayViewController class
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    //addWorkoutsCD.name = _name.text;
+    addRoutineDayCD.title = self.routineDayTextField.text;
+    NSError *error = nil;
+    if ([self.managedObjectContext hasChanges]) {
+        if (![self.managedObjectContext save:&error]) {
+            NSLog(@"RoutineDay Save Failed: %@", [error localizedDescription]);
+        } else {
+            NSLog(@"RoutineDayCD Save Succeeded");
+        }
+    }
+    
+    
     if ([[segue identifier] isEqualToString:@"addExercise"]) {
         AddExerciseTableViewController *add = [segue destinationViewController];
         add.workoutDayDelegate = self;
         //add.day = [self.workoutDays objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
+        
+        
+        AddExerciseTableViewController *addExerciseTableViewController = segue.destinationViewController;
+        
+        ExerciseCD *exerciseCD = [NSEntityDescription insertNewObjectForEntityForName:@"ExerciseCD" inManagedObjectContext:[self managedObjectContext]];
+        
+        exerciseCD.routineday = addRoutineDayCD;
+        addExerciseTableViewController.addExerciseCD = exerciseCD;
+        
     }
     if ([[segue identifier] isEqualToString:@"editExercise"]) {
         CreateSetViewController *create = [segue destinationViewController];

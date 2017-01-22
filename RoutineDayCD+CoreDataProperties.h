@@ -2,7 +2,7 @@
 //  RoutineDayCD+CoreDataProperties.h
 //  LiftLog
 //
-//  Created by Andrejus Skulis on 21/01/2017.
+//  Created by Andrejus Skulis on 22/01/2017.
 //  Copyright © 2017 Christian Ing. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,17 +17,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSDate *date;
 @property (nullable, nonatomic, retain) NSString *title;
-@property (nullable, nonatomic, retain) NSSet<NSManagedObject *> *exercises;
-@property (nullable, nonatomic, retain) NSManagedObject *workout;
+@property (nullable, nonatomic, retain) NSSet<ExerciseCD *> *exercises;
+@property (nullable, nonatomic, retain) WorkoutsCD *workout;
 
 @end
 
 @interface RoutineDayCD (CoreDataGeneratedAccessors)
 
-- (void)addExercisesObject:(NSManagedObject *)value;
-- (void)removeExercisesObject:(NSManagedObject *)value;
-- (void)addExercises:(NSSet<NSManagedObject *> *)values;
-- (void)removeExercises:(NSSet<NSManagedObject *> *)values;
+- (void)addExercisesObject:(ExerciseCD *)value;
+- (void)removeExercisesObject:(ExerciseCD *)value;
+- (void)addExercises:(NSSet<ExerciseCD *> *)values;
+- (void)removeExercises:(NSSet<ExerciseCD *> *)values;
 
 @end
 

@@ -1,56 +1,35 @@
 //
-//  HomeViewController.m
+//  ViewWorkoutDaysTableViewController.m
 //  LiftLog
 //
-//  Created by Christian Ing on 07/01/2017.
+//  Created by Andrejus Skulis on 21/01/2017.
 //  Copyright © 2017 Christian Ing. All rights reserved.
 //
 
-#import "HomeViewController.h"
+#import "ViewWorkoutDaysTableViewController.h"
 #import "AppDelegate.h"
 #import "NewWorkoutViewController.h"
-#import "WorkoutsCD.h"
-#import "ViewWorkoutDaysTableViewController.h"
 
-#import "Workouts.h"
-
-@interface HomeViewController ()
+@interface ViewWorkoutDaysTableViewController ()
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
-@property NSMutableArray *objects;
 @end
 
-@implementation HomeViewController
+@implementation ViewWorkoutDaysTableViewController
+
+@synthesize selectedWorkoutsCD;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSError *error = nil;
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    if (![[self fetchedResultsController]performFetch:&error]) {
-        NSLog(@"Error! %@", error);
-        abort();
-    }
-    
-    // set the new workout button to have rounded edges
-    self.create.layer.cornerRadius = 20;
-    self.create.clipsToBounds = YES;
-    
-    // remove separator for empty cells
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    //NSLog(@"%lu", (unsigned long)self.workouts.count);
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(createNewWorkout:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-}
-
--(void) viewWillAppear:(BOOL)animated {
-    
-    [self.tableView reloadData];
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 // WIll allow to refer to managedObjectContext as self.managedObjectContext
@@ -58,67 +37,32 @@
     return [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"%d", ([[segue identifier] isEqualToString:@"createWorkout"]));
-    if ([[segue identifier] isEqualToString:@"createWorkout"]) {
-        UINavigationController *navigationController = segue.destinationViewController;
-        NewWorkoutViewController *addNewWorkoutViewController = (NewWorkoutViewController*) navigationController.topViewController;
-        
-        WorkoutsCD *addWorkoutsCD = [NSEntityDescription insertNewObjectForEntityForName:@"WorkoutsCD" inManagedObjectContext:[self managedObjectContext]];
-        addNewWorkoutViewController.addWorkoutsCD = addWorkoutsCD;
-    }
-    // viewWorkoutDays
-    if ([[segue identifier] isEqualToString:@"viewWorkoutDays"]) {
-        ViewWorkoutDaysTableViewController *viewWorkoutDaysTableViewController = [segue destinationViewController];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        
-        WorkoutsCD *selectedWorkoutsCD = (WorkoutsCD*)[self.fetchedResultsController objectAtIndexPath:indexPath];
-        viewWorkoutDaysTableViewController.selectedWorkoutsCD = selectedWorkoutsCD;
-        
-    }
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)createNewWorkout:(id)sender {
-    [self performSegueWithIdentifier:@"createWorkout" sender:self];
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[self.fetchedResultsController sections]count];
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    //return self.workouts.count;
-    id<NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
-    Workouts *workout = [self.workouts objectAtIndex:indexPath.row];
-    cell.textLabel.text = workout.name;
-    cell.detailTextLabel.text = @"2 Exercises";
-    return cell;
-}
- */
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    WorkoutsCD *workoutsCD = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = workoutsCD.name;
-    cell.detailTextLabel.text = @"WorkoutsCD Details";
     return cell;
 }
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -126,29 +70,7 @@
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
- */
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        
-        NSManagedObjectContext *context = [self managedObjectContext];
-        WorkoutsCD *workoutCdToDelete = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        [context deleteObject:workoutCdToDelete];
-        
-        NSError *error = nil;
-        
-        if (![context save:&error]) {
-            NSLog(@"Error!!! %@", error);
-        }
-        //[self.objects removeObjectAtIndex:indexPath.row];
-        //[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    /*
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-     */
-}
+*/
 
 /*
 // Override to support editing the table view.
@@ -186,10 +108,6 @@
 }
 */
 
-- (IBAction)createClicked:(id)sender {
-    
-}
-
 #pragma mark - Fetched Results Controller Section
 
 -(NSFetchedResultsController*)fetchedResultsController {
@@ -202,11 +120,15 @@
     
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WorkoutsCD" inManagedObjectContext:context];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"RoutineDayCD" inManagedObjectContext:context];
     
     [fetchRequest setEntity:entity];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"title" ascending:YES];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"workout = %@", selectedWorkoutsCD];
+    
+    [fetchRequest setPredicate:predicate];
     
     NSArray *sortDescriptors = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
     
@@ -215,9 +137,6 @@
     _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
     
     _fetchedResultsController.delegate = self;
-    
-    //[[self.fetchedResultsController sections]count]
-    NSLog(@"_fetchedResultsController.fetchedObjects.count = %lu", _fetchedResultsController.fetchedObjects.count);
     
     return _fetchedResultsController;
 }
@@ -244,9 +163,9 @@
             [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
         case NSFetchedResultsChangeUpdate: {
-            WorkoutsCD *changeWorkoutCD = [self.fetchedResultsController objectAtIndexPath:indexPath];
+            RoutineDayCD *changeRoutineDayCD = [self.fetchedResultsController objectAtIndexPath:indexPath];
             UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            cell.textLabel.text = changeWorkoutCD.name;
+            cell.textLabel.text = changeRoutineDayCD.title;
         }
             break;
         case NSFetchedResultsChangeMove:

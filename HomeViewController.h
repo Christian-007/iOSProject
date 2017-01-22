@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WorkoutsCD.h"
 
-@interface HomeViewController : UITableViewController
+@interface HomeViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet UIButton *create;
-- (IBAction)createClicked:(id)sender;
+@property (nonatomic, strong)WorkoutsCD *workoutsCD;
+
 @property (strong) NSArray *workouts;
+
+
+- (IBAction)createClicked:(id)sender;
+
 @end

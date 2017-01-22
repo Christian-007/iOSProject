@@ -21,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    /*
     NSArray *workouts = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Overloading Workout"],[[Workouts alloc]initWithName:@"Test Workout"], [[Workouts alloc]initWithName:@"Another Workout"],[[Workouts alloc]initWithName:@"Just Another Workout"], [[Workouts alloc]initWithName:@"And Again Workout"], [[Workouts alloc]initWithName:@"Another Workout"], [[Workouts alloc]initWithName:@"Another Workout"], [[Workouts alloc]initWithName:@"Another Workout"], [[Workouts alloc]initWithName:@"Last Workout"], nil];
     
     // Sending workouts array to HomeControllerView list
@@ -34,7 +35,7 @@
     UINavigationController *navControllerHistory = [navController.viewControllers objectAtIndex:2];
     HistoryCollectionViewController *historyController = [navControllerHistory.viewControllers objectAtIndex:0];
     historyController.workouts = workoutImages;
-    
+    */
     return YES;
 }
 

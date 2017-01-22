@@ -44,7 +44,7 @@
                                 <rect key="frame" x="0.0" y="292" width="414" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fr7-DX-eRS" id="4aV-OP-TWn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="381" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gXE-Xy-LwN">
@@ -68,7 +68,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="1dd-CI-kVV" kind="show" id="JQF-aE-h34"/>
+                                    <segue destination="c8D-6O-OnH" kind="push" identifier="viewWorkoutDays" id="ysl-Ow-Nvv"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -81,6 +81,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LU6-yW-lnO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="588" y="-2310"/>
+        </scene>
+        <!--Workout Days-->
+        <scene sceneID="aKH-2C-C7N">
+            <objects>
+                <tableViewController id="c8D-6O-OnH" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xWx-aL-Ysm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SSf-WO-3Rh">
+                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SSf-WO-3Rh" id="bgM-jo-3aD">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c8D-6O-OnH" id="rCb-18-Frc"/>
+                            <outlet property="delegate" destination="c8D-6O-OnH" id="k3J-15-GcY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Workout Days" id="dB0-cz-qOY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KaF-Vy-YTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="-1938"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AYm-ki-BDC">
@@ -98,25 +127,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mE-wu-zJH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1179" y="-2740"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="PJU-ix-dD1">
-            <objects>
-                <viewController id="1dd-CI-kVV" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="itU-E9-FsN"/>
-                        <viewControllerLayoutGuide type="bottom" id="GAd-bl-E5C"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LXY-OV-fGT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p16-EL-NN0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1179" y="-1941"/>
         </scene>
         <!--Edit Routine Day-->
         <scene sceneID="qqz-zN-IaU">
@@ -136,7 +146,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" textLabel="8dL-RZ-h7G" detailTextLabel="NHU-3Y-Vmw" style="IBUITableViewCellStyleSubtitle" id="bqJ-S1-YOC">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="92" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bqJ-S1-YOC" id="thU-Yz-U3J">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
@@ -224,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcs-he-iy4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4134" y="-2714"/>
+            <point key="canvasLocation" x="2441" y="-3074"/>
         </scene>
         <!--Exercises-->
         <scene sceneID="3Ho-pg-LmN">
@@ -259,7 +269,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtt-y9-abn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4668" y="-2793"/>
+            <point key="canvasLocation" x="3092" y="-3601"/>
         </scene>
         <!--Edit Set View Controller-->
         <scene sceneID="uxC-O9-cj2">
@@ -328,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wOH-85-iwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3777" y="-2477"/>
+            <point key="canvasLocation" x="3677" y="-2753"/>
         </scene>
         <!--Create Set View Controller-->
         <scene sceneID="Eww-f0-oIP">
@@ -365,7 +375,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="setCell" rowHeight="66" id="scg-nA-9Ks">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="66" id="scg-nA-9Ks">
                                         <rect key="frame" x="0.0" y="28" width="414" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="scg-nA-9Ks" id="6sS-RU-EK2">
@@ -440,7 +450,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afn-GE-tkL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3164" y="-2468"/>
+            <point key="canvasLocation" x="3092" y="-2600"/>
         </scene>
         <!--Create Workout-->
         <scene sceneID="9KA-gV-oRs">
@@ -458,7 +468,11 @@
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <animations/>
                                 <items>
-                                    <barButtonItem systemItem="save" id="ptU-eE-hAw"/>
+                                    <barButtonItem systemItem="save" id="ptU-eE-hAw">
+                                        <connections>
+                                            <action selector="save:" destination="iQt-M8-gg7" id="zws-6a-pDQ"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IBz-x1-Agu">
@@ -559,12 +573,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="customTableView" destination="Hmj-49-rco" id="dOM-If-IjW"/>
-                        <segue destination="ZUV-vc-aqu" kind="show" identifier="editDay" id="K77-9V-bv2"/>
+                        <outlet property="name" destination="in6-JQ-R3s" id="6P5-cy-u7t"/>
+                        <segue destination="ZUV-vc-aqu" kind="show" identifier="addDay" id="K77-9V-bv2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jdc-Oe-vkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3485" y="-2740"/>
+            <point key="canvasLocation" x="1781" y="-2740"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EnJ-Ri-9JG">
@@ -1264,7 +1279,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="K77-9V-bv2"/>
-        <segue reference="Q0T-yH-cqo"/>
-        <segue reference="1Dc-3V-Vi4"/>
+        <segue reference="xdI-JO-muM"/>
+        <segue reference="NMb-j7-Xen"/>
     </inferredMetricsTieBreakers>
 </document>

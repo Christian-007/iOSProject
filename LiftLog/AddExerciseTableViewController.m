@@ -15,11 +15,15 @@
 
 @implementation AddExerciseTableViewController
 
+@synthesize addExerciseCD,addSetCD;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.exerciseArray = [NSArray arrayWithObjects:[[Exercise alloc]initWithTitle:@"Chest Exercise"], [[Exercise alloc]initWithTitle:@"Shoulder Exercise"], [[Exercise alloc]initWithTitle:@"Legs Exercise"], [[Exercise alloc]initWithTitle:@"Arm Exercise"], nil];
+    //self.exerciseArray = [NSArray arrayWithObjects:[[ExerciseCD alloc]initWithTitle:@"Chest Exercise"], [[ExerciseCD alloc]initWithTitle:@"Shoulder Exercise"], [[ExerciseCD alloc]initWithTitle:@"Legs Exercise"], [[ExerciseCD alloc]initWithTitle:@"Arm Exercise"], nil];
 
+    self.exerciseCDArray = @[@"Chest Exercise", @"Shoulder Exercise", @"Legs Exercise", @"Arm Exercise"];
+    //NSArray *myArray = @[@"1", @"2", @"3", @"4", @"5"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -40,25 +44,69 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.exerciseArray.count;
+    return self.exerciseCDArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    Exercise *exc = [self.exerciseArray objectAtIndex:indexPath.row];
-    cell.textLabel.text = exc.title;
+    //Exercise *exc = [self.exerciseCDArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.exerciseCDArray objectAtIndex:indexPath.row];
     return cell;
+}
+
+-(NSManagedObjectContext*)managedObjectContext {
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
 }
 
  #pragma mark - Navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     
+     NSLog(@"AddExercise... segue");
+     
      if ([[segue identifier] isEqualToString:@"editExercise"]) {
-         CreateSetViewController *create = [segue destinationViewController];
-         create.workoutDayDelegate = self.workoutDayDelegate;
-         create.exercise = [self.exerciseArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+         CreateSetViewController *addCreateSetViewController = [segue destinationViewController];
+         
+         self.addExerciseCD.title = [self.exerciseCDArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+         NSLog(@"Excercise = %@", self.addExerciseCD.title);
+         
+         addCreateSetViewController.exerciseCD = self.addExerciseCD;
+//         SetCD *setCD = [NSEntityDescription insertNewObjectForEntityForName:@"SetCD" inManagedObjectContext:[self managedObjectContext]];
+//         setCD.exercise = addExerciseCD;
+//         NSLog(@"Set Successfully created!");
+//         
+//         
+//         //addCreateSetViewController.workoutDayDelegate = self.workoutDayDelegate;
+//         //addCreateSetViewController.exercise = [self.exerciseArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+//         
+//         addCreateSetViewController.addSetCD = setCD;
+         NSLog(@"AddExercise... segue finished");
+
      }
+     
+    
+     
+    
+     
+     
+  /*   if ([[segue identifier] isEqualToString:@"addExercise"]) {
+         AddExerciseTableViewController *add = [segue destinationViewController];
+         add.workoutDayDelegate = self;
+         //add.day = [self.workoutDays objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
+         
+         
+         AddExerciseTableViewController *addExerciseTableViewController = segue.destinationViewController;
+         
+         ExerciseCD *exerciseCD = [NSEntityDescription insertNewObjectForEntityForName:@"ExerciseCD" inManagedObjectContext:[self managedObjectContext]];
+         
+         exerciseCD.routineday = addRoutineDayCD;
+         addExerciseTableViewController.addExerciseCD = exerciseCD;
+         
+     }
+   */
+
  }
 
 

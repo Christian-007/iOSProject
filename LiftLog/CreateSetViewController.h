@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "Exercise.h"
 #import "Set.h"
+#import "SetCD.h"
 #import "EditSetViewController.h"
 #import "WorkoutDayDelegate.h"
+#import "AppDelegate.h"
 
-@interface CreateSetViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CreateSetViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 @property (weak) id<WorkoutDayDelegate> workoutDayDelegate;
 @property (weak, nonatomic) IBOutlet UIButton *newset;
 @property (weak, nonatomic) IBOutlet UITableView *customTableView;
@@ -24,4 +26,11 @@
 @property (weak) IBOutlet UILabel *setLabel;
 @property (weak) IBOutlet UILabel *weightLabel;
 @property (weak) IBOutlet UILabel *repsLabel;
+
+@property (strong) ExerciseCD *exerciseCD;
+
+@property (nonatomic, strong) SetCD *selectedSetCD;
+
+@property (nonatomic, strong) SetCD *addSetCD;
+
 @end
