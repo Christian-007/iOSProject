@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "WorkoutsCD.h"
 #import "RoutineDayCD.h"
+#import "ExerciseCD.h"
 
 @interface ViewWorkoutDaysTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) WorkoutsCD *selectedWorkoutsCD;
+@property (nonatomic, strong) WorkoutsCD *selectedWorkoutDaysCD;
 
 @end

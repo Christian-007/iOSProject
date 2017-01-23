@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *create;
 @property (nonatomic, strong)WorkoutsCD *workoutsCD;
 
-@property (strong) NSArray *workouts;
+//@property (strong) NSArray *workouts;
 
 
 - (IBAction)createClicked:(id)sender;
