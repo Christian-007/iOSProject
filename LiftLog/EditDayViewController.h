@@ -21,6 +21,7 @@
 @property (strong) RoutineDay *day;
 @property (strong) Exercise *exc;
 @property (weak, nonatomic) IBOutlet UITextField *routineDayTextField;
+- (IBAction)daynameChanged:(id)sender;
 @property (strong) Set *set;
 
 - (IBAction)addExerciseButton:(id)sender;

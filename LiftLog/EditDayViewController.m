@@ -22,10 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // initialise exercise array
-    self.exerciseArray = [[NSMutableArray alloc]init];
-    [self.exerciseArray addObject:[[Exercise alloc]initWithTitle:@"Test"]];
-    self.setArrays = [[NSMutableArray alloc]init];
+    self.routineDayTextField.text = addRoutineDayCD.title;
     
     // set the add exercise button to have rounded edges
     self.addbutton.layer.cornerRadius = 20;
@@ -36,15 +33,15 @@
     
     NSError *error = nil;
     
-        if (![[self fetchedResultsController]performFetch:&error]) {
-            NSLog(@"Error! %@", error);
-            abort();
-        }
+    if (![[self fetchedResultsController]performFetch:&error]) {
+        NSLog(@"Error! %@", error);
+        abort();
+    }
 
 }
 
--(void) viewWillAppear:(BOOL)animated {
-    
+-(void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self.customTableView reloadData];
 }
 
@@ -76,17 +73,18 @@
     
     
     if ([[segue identifier] isEqualToString:@"addExercise"]) {
-        AddExerciseTableViewController *add = [segue destinationViewController];
-        add.workoutDayDelegate = self;
+//        AddExerciseTableViewController *add = [segue destinationViewController];
+//        add.workoutDayDelegate = self;
         //add.day = [self.workoutDays objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
         
         
         AddExerciseTableViewController *addExerciseTableViewController = segue.destinationViewController;
-        
-        ExerciseCD *exerciseCD = [NSEntityDescription insertNewObjectForEntityForName:@"ExerciseCD" inManagedObjectContext:[self managedObjectContext]];
-        
-        exerciseCD.routineday = addRoutineDayCD;
-        addExerciseTableViewController.addExerciseCD = exerciseCD;
+//        
+//        ExerciseCD *exerciseCD = [NSEntityDescription insertNewObjectForEntityForName:@"ExerciseCD" inManagedObjectContext:[self managedObjectContext]];
+//        
+//        exerciseCD.routineday = addRoutineDayCD;
+//        addExerciseTableViewController.addExerciseCD = exerciseCD;
+        addExerciseTableViewController.routineDayCD = addRoutineDayCD;
         
     }
     if ([[segue identifier] isEqualToString:@"editExercise"]) {
@@ -97,6 +95,8 @@
 
         NSLog(@"Number of Exercises %lu", [[self.fetchedResultsController sections]count]);
         create.exerciseCD = exerciseCD;
+        
+        
         
         //add.day = [self.workoutDays objectAtIndex:[self.customTableView indexPathForSelectedRow].row];
     }
@@ -115,34 +115,16 @@
     return [sectionInfo numberOfObjects];
 }
 
-/*
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
- 
- // Configure the cell...
- Workouts *workout = [self.workouts objectAtIndex:indexPath.row];
- cell.textLabel.text = workout.name;
- cell.detailTextLabel.text = @"2 Exercises";
- return cell;
- }
- */
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"exerciseCell" forIndexPath:indexPath];
     ExerciseCD *exerciseCD = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = exerciseCD.title;
-    cell.detailTextLabel.text = @"ExerciseCD Details";
+    //cell.detailTextLabel.text = @"ExerciseCD Details";
     return cell;
 }
 
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -220,6 +202,10 @@
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"title" ascending:YES];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"routineday = %@", addRoutineDayCD];
+    
+    [fetchRequest setPredicate:predicate];
     
     NSArray *sortDescriptors = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
     
@@ -284,4 +270,7 @@
     }
 }
 
+- (IBAction)daynameChanged:(id)sender {
+    addRoutineDayCD.title = self.routineDayTextField.text;
+}
 @end

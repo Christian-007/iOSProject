@@ -10,9 +10,10 @@
 #import "CoreViewController.h"
 #import "WorkoutsCD.h"
 #import "RoutineDayCD.h"
+#import "AppDelegate.h"
 
 
-@interface NewWorkoutViewController : CoreViewController
+@interface NewWorkoutViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate>
 
 - (IBAction)cancelClicked:(id)sender;
 - (IBAction)addWorkoutDay:(id)sender;

@@ -17,7 +17,7 @@
 
 @implementation AddExerciseTableViewController
 
-@synthesize addExerciseCD,addSetCD;
+@synthesize addExerciseCD,addSetCD,routineDayCD;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,7 +68,14 @@
 
 // Add exercise to the Exercise (Core Data entity) when the user clicked on one of the lists
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    self.addExerciseCD.title = [self.exerciseCDArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    
+    
+    ExerciseCD *exerciseCD = [NSEntityDescription insertNewObjectForEntityForName:@"ExerciseCD" inManagedObjectContext:[self managedObjectContext]];
+    
+    exerciseCD.routineday = routineDayCD;
+    //addExerciseTableViewController.addExerciseCD = exerciseCD;
+    addExerciseCD = exerciseCD;
+    addExerciseCD.title = [self.exerciseCDArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

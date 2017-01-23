@@ -10,6 +10,7 @@
 #import "WorkoutDayDelegate.h"
 #import "Exercise.h"
 #import "ExerciseCD.h"
+#import "RoutineDayCD.h"
 #import "SetCD.h"
 #import "AppDelegate.h"
 
@@ -20,6 +21,7 @@
 @property (strong) NSArray *exerciseCDArray;
 
 @property (nonatomic, strong) ExerciseCD *addExerciseCD;
+@property (nonatomic, strong) RoutineDayCD *routineDayCD;
 @property (nonatomic, strong) ExerciseCD *addSetCD;
 
 @end
