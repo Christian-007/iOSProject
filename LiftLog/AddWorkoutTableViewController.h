@@ -8,13 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "Workouts.h"
+#import "WorkoutsCD.h"
+#import "WorkoutsCalendar.h"
 #import "RoutineDay.h"
+#import "RoutineDayCD.h"
+#import "RoutineDayCalendar.h"
+#import "ExerciseCD.h"
 #import "Exercise.h"
+#import "ExerciseCalendar.h"
 #import "Set.h"
+#import "SetCD.h"
+#import "SetCalendar.h"
 #import "CalendarDayDelegate.h"
+#import "AppDelegate.h"
 
-@interface AddWorkoutTableViewController : UITableViewController
-@property (weak) id<CalendarDayDelegate> calendarDayDelegate;
+@interface AddWorkoutTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+//@property (weak) id<CalendarDayDelegate> calendarDayDelegate;
 @property (strong) NSArray *workoutDays;
 @property (strong) NSArray *workoutName;
 @property (strong) NSArray *detailWorkouts1;
@@ -25,5 +35,10 @@
 @property (strong) RoutineDay *routineDay;
 @property (strong) Exercise *exercises;
 @property (strong) Set *sets;
-- (IBAction)donePressed:(id)sender;
+
+@property (nonatomic, strong) NSSet<WorkoutsCD *> *workoutsList;
+
+@property (strong) WorkoutsCalendar *workCalendar;
+
+- (IBAction)cancelPressed:(id)sender;
 @end

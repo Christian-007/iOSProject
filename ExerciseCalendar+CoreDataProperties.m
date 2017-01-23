@@ -1,5 +1,5 @@
 //
-//  WorkoutsCD+CoreDataProperties.m
+//  ExerciseCalendar+CoreDataProperties.m
 //  LiftLog
 //
 //  Created by Christian Ing on 23/01/2017.
@@ -9,11 +9,13 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "WorkoutsCD+CoreDataProperties.h"
+#import "ExerciseCalendar+CoreDataProperties.h"
 
-@implementation WorkoutsCD (CoreDataProperties)
+@implementation ExerciseCalendar (CoreDataProperties)
 
-@dynamic name;
-@dynamic routinedays;
+@dynamic date;
+@dynamic title;
+@dynamic routineday;
+@dynamic sets;
 
 @end

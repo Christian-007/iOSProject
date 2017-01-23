@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F2109" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15A284" minimumToolsVersion="Xcode 7.0">
+    <entity name="ExerciseCalendar" representedClassName="ExerciseCalendar" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="routineday" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="RoutineDayCalendar" inverseName="exercises" inverseEntity="RoutineDayCalendar" syncable="YES"/>
+        <relationship name="sets" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="SetCalendar" inverseName="exercise" inverseEntity="SetCalendar" syncable="YES"/>
+    </entity>
     <entity name="ExerciseCD" representedClassName="ExerciseCD" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="routineday" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoutineDayCD" inverseName="exercises" inverseEntity="RoutineDayCD" syncable="YES"/>
         <relationship name="sets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SetCD" inverseName="exercise" inverseEntity="SetCD" syncable="YES"/>
+    </entity>
+    <entity name="RoutineDayCalendar" representedClassName="RoutineDayCalendar" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="exercises" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="ExerciseCalendar" inverseName="routineday" inverseEntity="ExerciseCalendar" syncable="YES"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="WorkoutsCalendar" inverseName="routinedays" inverseEntity="WorkoutsCalendar" syncable="YES"/>
     </entity>
     <entity name="RoutineDayCD" representedClassName="RoutineDayCD" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -12,11 +24,22 @@
         <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseCD" inverseName="routineday" inverseEntity="ExerciseCD" syncable="YES"/>
         <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkoutsCD" inverseName="routinedays" inverseEntity="WorkoutsCD" syncable="YES"/>
     </entity>
+    <entity name="SetCalendar" representedClassName="SetCalendar" syncable="YES">
+        <attribute name="reps" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="setNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="ExerciseCalendar" inverseName="sets" inverseEntity="ExerciseCalendar" syncable="YES"/>
+    </entity>
     <entity name="SetCD" representedClassName="SetCD" syncable="YES">
         <attribute name="reps" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="setNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ExerciseCD" inverseName="sets" inverseEntity="ExerciseCD" syncable="YES"/>
+    </entity>
+    <entity name="WorkoutsCalendar" representedClassName="WorkoutsCalendar" syncable="YES">
+        <attribute name="cdate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="routinedays" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="RoutineDayCalendar" inverseName="workout" inverseEntity="RoutineDayCalendar" syncable="YES"/>
     </entity>
     <entity name="WorkoutsCD" representedClassName="WorkoutsCD" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,8 +47,12 @@
     </entity>
     <elements>
         <element name="ExerciseCD" positionX="25" positionY="-141" width="128" height="103"/>
-        <element name="RoutineDayCD" positionX="-155" positionY="-141" width="128" height="103"/>
+        <element name="RoutineDayCD" positionX="-198" positionY="-141" width="128" height="103"/>
         <element name="SetCD" positionX="234" positionY="-141" width="128" height="103"/>
         <element name="WorkoutsCD" positionX="-369" positionY="-111" width="128" height="73"/>
+        <element name="WorkoutsCalendar" positionX="-353" positionY="9" width="128" height="88"/>
+        <element name="SetCalendar" positionX="223" positionY="-9" width="128" height="103"/>
+        <element name="RoutineDayCalendar" positionX="-164" positionY="-9" width="128" height="103"/>
+        <element name="ExerciseCalendar" positionX="34" positionY="-9" width="128" height="103"/>
     </elements>
 </model>

@@ -1,5 +1,5 @@
 //
-//  WorkoutsCD.h
+//  SetCalendar.h
 //  LiftLog
 //
 //  Created by Christian Ing on 23/01/2017.
@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class RoutineDayCD;
+@class ExerciseCalendar;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WorkoutsCD : NSManagedObject
+@interface SetCalendar : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -21,4 +21,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "WorkoutsCD+CoreDataProperties.h"
+#import "SetCalendar+CoreDataProperties.h"

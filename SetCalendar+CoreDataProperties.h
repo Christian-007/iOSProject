@@ -1,5 +1,5 @@
 //
-//  SetCD+CoreDataProperties.h
+//  SetCalendar+CoreDataProperties.h
 //  LiftLog
 //
 //  Created by Christian Ing on 23/01/2017.
@@ -9,16 +9,16 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "SetCD.h"
+#import "SetCalendar.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SetCD (CoreDataProperties)
+@interface SetCalendar (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *reps;
 @property (nullable, nonatomic, retain) NSNumber *setNumber;
 @property (nullable, nonatomic, retain) NSString *weight;
-@property (nullable, nonatomic, retain) ExerciseCD *exercise;
+@property (nullable, nonatomic, retain) ExerciseCalendar *exercise;
 
 @end
 

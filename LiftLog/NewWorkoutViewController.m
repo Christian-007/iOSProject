@@ -160,7 +160,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"workoutDay" forIndexPath:indexPath];
     RoutineDayCD *routineDayCD = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = routineDayCD.title;
-    cell.detailTextLabel.text = @"ExerciseFUCKCD Details";
+    cell.detailTextLabel.text = @"Exercise Details";
     return cell;
 }
 

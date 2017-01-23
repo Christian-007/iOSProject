@@ -73,12 +73,18 @@
     }
     // viewWorkoutDays
     if ([[segue identifier] isEqualToString:@"viewWorkoutDays"]) {
-        ViewWorkoutDaysTableViewController *viewWorkoutDaysTableViewController = [segue destinationViewController];
+        /*ViewWorkoutDaysTableViewController *viewWorkoutDaysTableViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         WorkoutsCD *selectedWorkoutsCD = (WorkoutsCD*)[self.fetchedResultsController objectAtIndexPath:indexPath];
-        viewWorkoutDaysTableViewController.selectedWorkoutDaysCD = selectedWorkoutsCD;
+        viewWorkoutDaysTableViewController.selectedWorkoutDaysCD = selectedWorkoutsCD;*/
+        UINavigationController *navigationController = segue.destinationViewController;
+        NewWorkoutViewController *addNewWorkoutViewController = (NewWorkoutViewController*) navigationController.topViewController;
         
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        WorkoutsCD *selectedWorkoutsCD = (WorkoutsCD*)[self.fetchedResultsController objectAtIndexPath:indexPath];
+
+        addNewWorkoutViewController.addWorkoutsCD = selectedWorkoutsCD;
     }
 }
 
@@ -167,7 +173,7 @@
     _fetchedResultsController.delegate = self;
     
     //[[self.fetchedResultsController sections]count]
-    NSLog(@"_fetchedResultsController.fetchedObjects.count = %lu", _fetchedResultsController.fetchedObjects.count);
+    //NSLog(@"_fetchedResultsController.fetchedObjects.count = %lu", _fetchedResultsController.fetchedObjects.count);
     
     return _fetchedResultsController;
 }

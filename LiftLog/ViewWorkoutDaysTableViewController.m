@@ -113,6 +113,7 @@
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"workout = %@", selectedWorkoutDaysCD];
     
+    [NSFetchedResultsController deleteCacheWithName:nil]; 
     [fetchRequest setPredicate:predicate];
     
     NSArray *sortDescriptors = [[NSArray alloc]initWithObjects:sortDescriptor, nil];

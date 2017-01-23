@@ -10,20 +10,27 @@
 
 @interface CalendarViewController ()
 
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
 @end
 
 @implementation CalendarViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *workout1 = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Flat Bench Press"],[[Workouts alloc]initWithName:@"Incline Dumbbell Press"], [[Workouts alloc]initWithName:@"Dumbbell Fly"], nil];
     
-    NSArray *workout2 = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Barbell Shoulder Press"], [[Workouts alloc]initWithName:@"Arnold Press"], [[Workouts alloc]initWithName:@"Lateral Raises"], [[Workouts alloc]initWithName:@"Triceps Pull Down"], nil];
+    NSError *error = nil;
     
-    //self.workoutLog = [NSArray arrayWithObjects:workout1, workout2, nil];
-    
-//    self.routineName = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Chest Workout"],[[Workouts alloc]initWithName:@"Shoulder Workout"], nil];
+    if (![[self fetchedResultsController]performFetch:&error]) {
+        NSLog(@"Error! %@", error);
+        abort();
+        
+        
+    }
     
     [self calculateDate];
 }
@@ -31,6 +38,32 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    NSError *error = nil;
+    
+    if (![[self fetchedResultsController]performFetch:&error]) {
+        NSLog(@"Error! %@", error);
+        abort();
+        
+        
+    }
+
+    [super viewDidAppear:animated];
+    [self.customTableView reloadData];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    NSError *error = nil;
+    
+    if (![[self fetchedResultsController]performFetch:&error]) {
+        NSLog(@"Error! %@", error);
+        abort();
+    }
+    
+    [self.customTableView reloadData];
 }
 
 - (void)calculateDate{
@@ -82,7 +115,7 @@
     NSArray *workout2 = [NSArray arrayWithObjects:[[Exercise alloc]initWithTitle:@"Shoulder Press"], [[Exercise alloc]initWithTitle:@"Barbell Press"], nil];
     
     self.workoutLog = [NSArray arrayWithObjects:workout1, workout2, nil];
-    [self.collectionView reloadData]; // Reload/refresh the collection view
+    [self.customTableView reloadData]; // Reload/refresh the collection view
 }
 
 - (IBAction)forwardClicked:(id)sender
@@ -115,87 +148,144 @@
     NSArray *workout2 = [NSArray arrayWithObjects:[[Workouts alloc]initWithName:@"Just Another Workout"], [[Workouts alloc]initWithName:@"And Again Workout"], [[Workouts alloc]initWithName:@"Another Workout"], [[Workouts alloc]initWithName:@"Another Workout"], [[Workouts alloc]initWithName:@"Another Workout"], [[Workouts alloc]initWithName:@"Last Workout"], nil];
     
     self.workoutLog = [NSArray arrayWithObjects:workout1, workout2, nil];
-    [self.collectionView reloadData]; // Reload/refresh the collection view
+    [self.customTableView reloadData]; // Reload/refresh the collection view
 
 }
 
-// Delegate method
-- (void)updateWithExercise:(NSMutableArray *)exc withSets:(NSMutableArray *)setsArray{
-    NSLog(@"hello");
-    self.exerciseArray = exc;
-    self.setsArray = setsArray;
-    [self.collectionView reloadData];
+-(NSManagedObjectContext*)managedObjectContext {
+    return [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
 }
+
 
 #pragma mark - Navigation
 // Sending the selected cell data to DayViewController class
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"addWorkout"]) {
         UINavigationController *navController = [segue destinationViewController];
-        AddWorkoutTableViewController *add = [navController.viewControllers objectAtIndex:0];
-        add.calendarDayDelegate = self;
+        AddWorkoutTableViewController *addWorkoutTableViewController = [navController.viewControllers objectAtIndex:0];
+        
+        WorkoutsCalendar *calendar = [NSEntityDescription insertNewObjectForEntityForName:@"WorkoutsCalendar" inManagedObjectContext:[self managedObjectContext]];
+        calendar.cdate = self.today;
+        addWorkoutTableViewController.workCalendar = calendar;
     }
 }
 
+#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
-    /* if (self.exerciseArray.count == 0) {
-        // Create a label to fit the Collection View
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, collectionView.bounds.size.width, collectionView.bounds.size.height)];
-        
-        // Set the message
-        messageLabel.text = @"No Workout Log";
-        messageLabel.textColor = [UIColor colorWithRed:(170/255.f) green:(170/255.f) blue:(170/255.f) alpha:1.0];
-        [messageLabel setFont:[UIFont systemFontOfSize:25]];
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        [messageLabel sizeToFit]; //auto size the text
-        
-        // Set back to label view
-        collectionView.backgroundView = messageLabel;
-        
-        return 0;
-    }
-    collectionView.backgroundView = nil; */
-    return self.setsArray.count;
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSLog(@"section: %lu", [[_fetchedResultsController sections]count]);
+    return [[_fetchedResultsController sections]count];
 }
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return [[self.setsArray objectAtIndex:section] count];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    //return self.workouts.count;
+    id<NSFetchedResultsSectionInfo> sectionInfo = [[_fetchedResultsController sections] objectAtIndex:section];
+    //NSLog(@"section: %lu", [elf.fetchedResultsController sections]count]);
+    return [sectionInfo numberOfObjects];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"calendarCell" forIndexPath:indexPath];
-    
-    // Show set number, reps, and weights
-    //Workouts *list = [self.workoutLog[indexPath.section] objectAtIndex:indexPath.row];
-    Set *list = [self.setsArray[indexPath.section] objectAtIndex:indexPath.row];
-    
-    // Configure the cell
-    UILabel *exerciseLabel = (UILabel *)[cell viewWithTag:1];
 
-//    [exerciseLabel setText:[list.name uppercaseString]];
-    exerciseLabel.text = [NSString stringWithFormat:@"Set %d: %@ x %@", list.setNumber, list.weight, list.reps];
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    WorkoutsCalendar *calendar = [_fetchedResultsController objectAtIndexPath:indexPath];
+   
+    NSLog(@"Workout: %@", calendar.name);
+    cell.textLabel.text = calendar.name;
+    //cell.detailTextLabel.text = @"WorkoutsCD Details";
     return cell;
 }
 
 
-// Set the header section
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-    UICollectionReusableView *reusableview = nil;
-    
-    if (kind == UICollectionElementKindSectionHeader) {
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerView" forIndexPath:indexPath];
-        // Get the name of the Exercise for each array
-        Exercise *exc = [self.exerciseArray objectAtIndex:indexPath.section];
-        NSString *title = exc.title;
-        UILabel *headerLabel = (UILabel *)[headerView viewWithTag:5];
-        headerLabel.text = title;
-        reusableview = headerView;
+#pragma mark - Fetched Results Controller Section
+
+-(NSFetchedResultsController*)fetchedResultsController {
+    NSLog(@"fetchedResults TOP");
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
     }
-    return reusableview;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc]init];
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"WorkoutsCalendar" inManagedObjectContext:context];
+    
+    [fetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
+    
+    NSArray *sortDescriptors = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
+    
+    fetchRequest.sortDescriptors = sortDescriptors;
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc]initWithFetchRequest:fetchRequest managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
+
+    _fetchedResultsController.delegate = self;
+    
+    
+    NSMutableArray *array = [[context executeFetchRequest:fetchRequest error:nil] mutableCopy];
+    
+    NSLog(@"*****FETCHED RESULTS******");
+    for (NSManagedObject *obj in array) {
+        NSLog(@"name: %@\n", [obj valueForKey:@"name"]);
+    }
+    
+
+    
+    return _fetchedResultsController;
 }
+
+#pragma mark - Fetched Results Controller Delegates
+
+-(void) controllerWillChangeContent:(NSFetchedResultsController *) controller {
+    [self.customTableView beginUpdates];
+}
+
+-(void) controllerDidChangeContent:(NSFetchedResultsController *) controller {
+    [self.customTableView endUpdates];
+}
+
+-(void) controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.customTableView;
+    NSLog(@"case NSFetchedResultsChangeUpdate: type");
+    switch (type) {
+            
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+        case NSFetchedResultsChangeUpdate: {
+            //NSLog(@"case NSFetchedResultsChangeUpdate: printed");
+            WorkoutsCalendar *changeWorkoutCalendar = [_fetchedResultsController objectAtIndexPath:indexPath];
+            UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+            cell.textLabel.text = changeWorkoutCalendar.name;
+            //NSLog(@"case NSFetchedResultsChangeUpdate: not printed");
+        }
+            break;
+        case NSFetchedResultsChangeMove:
+            [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+-(void)controller:(NSFetchedResultsController *)controller didChangeSection:(id<NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type {
+    
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self.customTableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [self.customTableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+    }
+}
+
+
 
 @end

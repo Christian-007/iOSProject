@@ -1,16 +1,15 @@
 //
-//  ExerciseCD.m
+//  SetCalendar.m
 //  LiftLog
 //
 //  Created by Christian Ing on 23/01/2017.
 //  Copyright © 2017 Christian Ing. All rights reserved.
 //
 
-#import "ExerciseCD.h"
-#import "RoutineDayCD.h"
-#import "SetCD.h"
+#import "SetCalendar.h"
+#import "ExerciseCalendar.h"
 
-@implementation ExerciseCD
+@implementation SetCalendar
 
 // Insert code here to add functionality to your managed object subclass
 
