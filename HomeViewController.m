@@ -25,6 +25,8 @@
 
 @implementation HomeViewController
 
+@synthesize workoutsCD;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -65,6 +67,8 @@
         NewWorkoutViewController *addNewWorkoutViewController = (NewWorkoutViewController*) navigationController.topViewController;
         
         WorkoutsCD *addWorkoutsCD = [NSEntityDescription insertNewObjectForEntityForName:@"WorkoutsCD" inManagedObjectContext:[self managedObjectContext]];
+    
+        addWorkoutsCD.name = @"RoutineName";
         addNewWorkoutViewController.addWorkoutsCD = addWorkoutsCD;
     }
     // viewWorkoutDays

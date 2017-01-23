@@ -28,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.name.text = addWorkoutsCD.name;
+    
     // remove separator for empty cells
     self.customTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
@@ -49,7 +51,7 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    addWorkoutsCD.name = _name.text;
+//    addWorkoutsCD.name = _name.text;
     NSError *error = nil;
     if ([self.managedObjectContext hasChanges]) {
         if (![self.managedObjectContext save:&error]) {
@@ -213,6 +215,10 @@
     [fetchRequest setEntity:entity];
     
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc]initWithKey:@"title" ascending:YES];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"workout = %@", addWorkoutsCD];
+    
+    [fetchRequest setPredicate:predicate];
     
     NSArray *sortDescriptors = [[NSArray alloc]initWithObjects:sortDescriptor, nil];
     
