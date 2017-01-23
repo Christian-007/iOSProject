@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4409CF421E2D8F300042F33F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4409CF401E2D8F300042F33F /* Model.xcdatamodeld */; };
-		444A2CAA1E3277C100DECF1E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 444A2CA81E3277C100DECF1E /* Model.xcdatamodeld */; };
 		4473751D1E350A5300F40BA6 /* WorkoutsCD+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 4473750E1E350A5300F40BA6 /* WorkoutsCD+CoreDataProperties.m */; };
 		4473751E1E350A5300F40BA6 /* WorkoutsCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 447375101E350A5300F40BA6 /* WorkoutsCD.m */; };
 		4473751F1E350A5300F40BA6 /* RoutineDayCD+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 447375121E350A5300F40BA6 /* RoutineDayCD+CoreDataProperties.m */; };
@@ -27,6 +26,11 @@
 		9C067B9D1E26C12500DAB358 /* AddExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B9C1E26C12400DAB358 /* AddExerciseTableViewController.m */; };
 		9C067BA01E26C66A00DAB358 /* CreateSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067B9F1E26C66A00DAB358 /* CreateSetViewController.m */; };
 		9C067BA31E26C6AD00DAB358 /* EditSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C067BA21E26C6AD00DAB358 /* EditSetViewController.m */; };
+		9C32A6331E35B019005BB5C7 /* DetailWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32A62F1E35B019005BB5C7 /* DetailWebViewController.m */; };
+		9C32A6341E35B019005BB5C7 /* NewsfeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32A6311E35B019005BB5C7 /* NewsfeedTableViewController.m */; };
+		9C32A6381E35B13E005BB5C7 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32A6361E35B13E005BB5C7 /* MapsViewController.m */; };
+		9C32A63A1E35B200005BB5C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C32A6391E35B200005BB5C7 /* MapKit.framework */; };
+		9C32A63C1E35B206005BB5C7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C32A63B1E35B206005BB5C7 /* CoreLocation.framework */; };
 		9C405EF41E252F700073AD4F /* workout_fade.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C405EF31E252F700073AD4F /* workout_fade.png */; };
 		9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */; };
 		9C5EA0C91E2D214600ED5FCF /* Sports Mode Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C5EA0C81E2D214600ED5FCF /* Sports Mode Filled-100.png */; };
@@ -71,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		4409CF411E2D8F300042F33F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		444A2CA91E3277C100DECF1E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4473750D1E350A5300F40BA6 /* WorkoutsCD+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WorkoutsCD+CoreDataProperties.h"; sourceTree = "<group>"; };
 		4473750E1E350A5300F40BA6 /* WorkoutsCD+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WorkoutsCD+CoreDataProperties.m"; sourceTree = "<group>"; };
 		4473750F1E350A5300F40BA6 /* WorkoutsCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkoutsCD.h; sourceTree = "<group>"; };
@@ -106,6 +109,14 @@
 		9C067B9F1E26C66A00DAB358 /* CreateSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateSetViewController.m; sourceTree = "<group>"; };
 		9C067BA11E26C6AD00DAB358 /* EditSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditSetViewController.h; sourceTree = "<group>"; };
 		9C067BA21E26C6AD00DAB358 /* EditSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditSetViewController.m; sourceTree = "<group>"; };
+		9C32A62F1E35B019005BB5C7 /* DetailWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailWebViewController.m; sourceTree = "<group>"; };
+		9C32A6301E35B019005BB5C7 /* DetailWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailWebViewController.h; sourceTree = "<group>"; };
+		9C32A6311E35B019005BB5C7 /* NewsfeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsfeedTableViewController.m; sourceTree = "<group>"; };
+		9C32A6321E35B019005BB5C7 /* NewsfeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsfeedTableViewController.h; sourceTree = "<group>"; };
+		9C32A6361E35B13E005BB5C7 /* MapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
+		9C32A6371E35B13E005BB5C7 /* MapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
+		9C32A6391E35B200005BB5C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9C32A63B1E35B206005BB5C7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		9C405EF31E252F700073AD4F /* workout_fade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = workout_fade.png; sourceTree = "<group>"; };
 		9C405EF51E25368F0073AD4F /* NewWorkoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewWorkoutViewController.h; sourceTree = "<group>"; };
 		9C405EF61E25368F0073AD4F /* NewWorkoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewWorkoutViewController.m; sourceTree = "<group>"; };
@@ -156,6 +167,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C32A63C1E35B206005BB5C7 /* CoreLocation.framework in Frameworks */,
+				9C32A63A1E35B200005BB5C7 /* MapKit.framework in Frameworks */,
 				44C5ED331E2E68B400D8EEBA /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -201,10 +214,31 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		9C32A62E1E35AFD6005BB5C7 /* NewsfeedTabClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9C32A62F1E35B019005BB5C7 /* DetailWebViewController.m */,
+				9C32A6301E35B019005BB5C7 /* DetailWebViewController.h */,
+				9C32A6311E35B019005BB5C7 /* NewsfeedTableViewController.m */,
+				9C32A6321E35B019005BB5C7 /* NewsfeedTableViewController.h */,
+			);
+			name = NewsfeedTabClasses;
+			sourceTree = "<group>";
+		};
+		9C32A6351E35B12F005BB5C7 /* MapsTabClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9C32A6361E35B13E005BB5C7 /* MapsViewController.m */,
+				9C32A6371E35B13E005BB5C7 /* MapsViewController.h */,
+			);
+			name = MapsTabClasses;
+			sourceTree = "<group>";
+		};
 		9CA06BE41E1D2DF8004C8168 = {
 			isa = PBXGroup;
 			children = (
-				444A2CA81E3277C100DECF1E /* Model.xcdatamodeld */,
+				9C32A63B1E35B206005BB5C7 /* CoreLocation.framework */,
+				9C32A6391E35B200005BB5C7 /* MapKit.framework */,
 				44C5ED321E2E68B400D8EEBA /* CoreData.framework */,
 				9CA06BEF1E1D2DF8004C8168 /* LiftLog */,
 				9CA06C091E1D2DF8004C8168 /* LiftLogTests */,
@@ -226,6 +260,8 @@
 		9CA06BEF1E1D2DF8004C8168 /* LiftLog */ = {
 			isa = PBXGroup;
 			children = (
+				9C32A6351E35B12F005BB5C7 /* MapsTabClasses */,
+				9C32A62E1E35AFD6005BB5C7 /* NewsfeedTabClasses */,
 				44E8B5AC1E33A2F4005BC419 /* CoreDataModel */,
 				9CE028761E2C05E9005FADAE /* Models */,
 				9CE028751E2C0583005FADAE /* CalendarTabClasses */,
@@ -409,6 +445,11 @@
 				TargetAttributes = {
 					9CA06BEC1E1D2DF8004C8168 = {
 						CreatedOnToolsVersion = 7.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					9CA06C051E1D2DF8004C8168 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -482,6 +523,7 @@
 				9CA06BF51E1D2DF8004C8168 /* AppDelegate.m in Sources */,
 				9C067B9D1E26C12500DAB358 /* AddExerciseTableViewController.m in Sources */,
 				9C067BA01E26C66A00DAB358 /* CreateSetViewController.m in Sources */,
+				9C32A6331E35B019005BB5C7 /* DetailWebViewController.m in Sources */,
 				9C405EF71E25368F0073AD4F /* NewWorkoutViewController.m in Sources */,
 				447375231E350A5300F40BA6 /* SetCD+CoreDataProperties.m in Sources */,
 				4409CF421E2D8F300042F33F /* Model.xcdatamodeld in Sources */,
@@ -502,13 +544,14 @@
 				9CE529831E23CFD40052D2AB /* WorkoutDetailViewController.m in Sources */,
 				9C7C9A031E27989C0023D930 /* Exercise.m in Sources */,
 				9CBF0FDB1E212A6300FC8FFC /* HomeViewController.m in Sources */,
-				444A2CAA1E3277C100DECF1E /* Model.xcdatamodeld in Sources */,
 				9C067B921E26513D00DAB358 /* DayViewController.m in Sources */,
 				4473751E1E350A5300F40BA6 /* WorkoutsCD.m in Sources */,
 				447375211E350A5300F40BA6 /* ExerciseCD+CoreDataProperties.m in Sources */,
 				9C5EA0CC1E2D255200ED5FCF /* AddWorkoutTableViewController.m in Sources */,
+				9C32A6381E35B13E005BB5C7 /* MapsViewController.m in Sources */,
 				9C5EA0CF1E2D3B8600ED5FCF /* ShowWorkoutDetailTableViewController.m in Sources */,
 				44E8B5AB1E32DCB3005BC419 /* CoreViewController.m in Sources */,
+				9C32A6341E35B019005BB5C7 /* NewsfeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,16 +804,6 @@
 				4409CF411E2D8F300042F33F /* Model.xcdatamodel */,
 			);
 			currentVersion = 4409CF411E2D8F300042F33F /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		444A2CA81E3277C100DECF1E /* Model.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				444A2CA91E3277C100DECF1E /* Model.xcdatamodel */,
-			);
-			currentVersion = 444A2CA91E3277C100DECF1E /* Model.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
